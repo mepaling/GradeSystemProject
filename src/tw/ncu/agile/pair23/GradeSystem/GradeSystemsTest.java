@@ -21,9 +21,25 @@ import org.junit.Test;
  */
 
 public class GradeSystemsTest {
+	/*
+	 * Public class GradeSystemsTest
+	 * 	Variables:
+	 * 	GradeSystems aGradeSystems
+	 * 	static Grades grades1, grades2
+	 * 	Double[] oldWeights = {0.1, 0.1, 0.1, 0.3, 0.4}
+	 * 	Double[] newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
+	 * 	Functions:
+	 *	public void testGradeSystems()
+	 * 	public void testContainsID_NO()
+	 *	public void testContainsID_YES()
+	 * 	public void testShowGrade()
+	 * 	public void testShowRank()
+	 * 	public void testShowRank2()
+	 * 	public void testUpdateWeights()
+	 * End class GradeSystemsTest
+	 */
 	GradeSystems aGradeSystems;
-	static Grades grades1;
-	static Grades grades2;
+	static Grades grades1, grades2;
 	Double[] oldWeights = {0.1, 0.1, 0.1, 0.3, 0.4};
 	Double[] newWeights = {0.2, 0.2, 0.2, 0.2, 0.2};
 	@BeforeClass
@@ -50,22 +66,43 @@ public class GradeSystemsTest {
 
 	@Test
 	public void testGradeSystems() {
-		//應該要有東西而非null
+		/*
+		 * Public testGradeSystems()
+		 * 	建構aGradeSystems
+		 * 	應該要有東西而非null
+		 * End testGradeSystems()
+		 */
 		assertNotNull("aGradeSystems should be created!", aGradeSystems);
 	}
 
 	@Test
 	public void testContainsID_NO() {
+		/*
+		 * Public testContainsID_NO()
+		 * 	不應該要有 "105522000" 這個ID, 所以是False
+		 * End testContainsID_NO()
+		 */
 		assertFalse(aGradeSystems.containsID("105522000"));
 	}
 	
 	@Test
 	public void testContainsID_YES() {
+		/*
+		 * Public testContainsID_YES()
+		 * 	應該要有 "962001044" 這個ID, 所以是True
+		 * End testContainsID_YES()
+		 */
 		assertTrue(aGradeSystems.containsID("962001044"));
 	}
 
 	@Test
 	public void testShowGrade() {
+		/*
+		 * Public testShowGrade()
+		 * 	改掉System.out去收本來顯示在console的字, 記得改回來!
+		 * 	比對與預期的Grade(手算)是否相同
+		 * End testShowGrade()
+		 */
 		grades1.calculateTotalGrade(oldWeights);
 		//注意 System.out.println() 是吐出 "\r\n" 而非 "\n"
 		String expected = grades1.name + "成績：" + grades1.toString() + "\r\n";
@@ -86,6 +123,12 @@ public class GradeSystemsTest {
 
 	@Test
 	public void testShowRank() {
+		/*
+		 * Public testShowRank()
+		 * 	改掉System.out去收本來顯示在console的字, 記得改回來!
+		 * 	比對與預期的Rank是否相同
+		 * End testShowRank()
+		 */
 		//使用 ByteArrayOutputStream 獲得 本來該顯示在Console的字串 (把System.out換掉)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
@@ -104,6 +147,12 @@ public class GradeSystemsTest {
 	//調權重為 newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
 	@Test
 	public void testShowRank2() {
+		/*
+		 * Public testShowRank2()
+		 * 	將權重改成 {0.2, 0.2, 0.2, 0.2, 0.2}
+		 * 	比對與預期的Rank是否相同
+		 * End testShowRank2()
+		 */
 		//利用 ByteArrayInputStream 模擬 System.in (鍵盤的輸入動作)
 		ByteArrayInputStream in = new ByteArrayInputStream("20\n20\n20\n20\n20\nY\n".getBytes());
 		System.setIn(in);
@@ -128,6 +177,13 @@ public class GradeSystemsTest {
 
 	@Test
 	public void testUpdateWeights() {
+		/*
+		 * Public testUpdateWeights()
+		 * 	將權重改成 {0.2, 0.2, 0.2, 0.2, 0.2}
+		 * 	再去看有沒有改成功 (修改System.in & System.out)
+		 * End testUpdateWeights()
+		 */
+		
 		//利用 ByteArrayInputStream 模擬 System.in (鍵盤的輸入動作)
 		ByteArrayInputStream in = new ByteArrayInputStream("20\n20\n20\n20\n20\nY\n".getBytes());
 		System.setIn(in);
