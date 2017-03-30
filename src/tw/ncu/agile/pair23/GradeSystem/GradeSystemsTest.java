@@ -105,7 +105,7 @@ public class GradeSystemsTest {
 		 */
 		grades1.calculateTotalGrade(oldWeights);
 		//注意 System.out.println() 是吐出 "\r\n" 而非 "\n"
-		String expected = grades1.name + "成績：" + grades1.toString() + "\r\n";
+		String expected = grades1.getName() + "成績：" + grades1.printGrades() + "\r\n";
 
 		//使用 ByteArrayOutputStream 獲得 本來該顯示在Console的字串 (把System.out換掉)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
@@ -194,7 +194,7 @@ public class GradeSystemsTest {
 		//最後記得把 System 的 input 改回 System.in
 		System.setIn(System.in);
 		
-		Double[] actual = aGradeSystems.weights;
+		Double[] actual = aGradeSystems.getWeights();
 		boolean ans = true;
 		for (int i=0; i<5; i++) {
 			if (!newWeights[i].equals(actual[i])) {

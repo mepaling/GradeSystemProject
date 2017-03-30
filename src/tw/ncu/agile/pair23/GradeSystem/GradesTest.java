@@ -19,16 +19,16 @@ public class GradesTest {
 	/*
 	 * Public class GradesTest
 	 * 	Variables:
-	 * 	private Grades aGrades
-	 * 	private Double weights = {0.1, 0.1, 0.1, 0.3, 0.4}
+	 * 		private Grades aGrades
+	 * 		private Double weights = {0.1, 0.1, 0.1, 0.3, 0.4}
 	 * 	Functions:
-	 * 	public void testGrades()
-	 * 	public void testGradesStringStringIntIntIntIntInt()
-	 * 	public void testCalculateTotalGrade
-	 * 	public void testToString()
-	 * 	public void testDoubleRoundToInteger1()
-	 * 	public void testDoubleRoundToInteger2()
-	 * 	public void testDoubleRoundToInteger3()
+	 * 		public void testGrades()
+	 * 		public void testGradesStringStringIntIntIntIntInt()
+	 * 		public void testCalculateTotalGrade
+	 * 		public void testToString()
+	 * 		public void testDoubleRoundToInteger1()
+	 * 		public void testDoubleRoundToInteger2()
+	 * 		public void testDoubleRoundToInteger3()
 	 */
 	private Grades aGrades;
 	private Double[] weights = {0.1, 0.1, 0.1, 0.3, 0.4};
@@ -79,26 +79,26 @@ public class GradesTest {
 		 * 	和手算對比 值要一樣才對
 		 * End testCalculateTotalGrade()
 		 */
-		double total_hand_cal_double = aGrades.lab1*weights[0] + aGrades.lab2*weights[1]+ 
-				aGrades.lab3*weights[2]+ aGrades.midTerm*weights[3] +
-				aGrades.finalExam*weights[4];
+		double total_hand_cal_double = aGrades.getLab1()*weights[0] + aGrades.getLab2()*weights[1]+ 
+				aGrades.getLab3()*weights[2]+ aGrades.getMidterm()*weights[3] +
+				aGrades.getfinalExam()*weights[4];
 		int total_hand_cal_int = aGrades.DoubleRoundToInteger(total_hand_cal_double);
 		aGrades.calculateTotalGrade(weights);
-		assertEquals(total_hand_cal_int, aGrades.totalGrade);
+		assertEquals(total_hand_cal_int, aGrades.getTotalGrade());
 	}
 	
 	@Test
-	public void testToString() {
+	public void testPrintGrades() {
 		/*
 		 * public void testToString()
 		 * 	複寫 object 的 toString method
 		 * 	和手排版對比 值要一樣才對
 		 * End testToString()
 		 */
-		String s = "lab1:\t" + aGrades.lab1 + "\nlab2:\t" + aGrades.lab2 + "\nlab3:\t" + aGrades.lab3 + 
-				"\nmid-term:\t" + aGrades.midTerm + "\nfinal exam:\t" + aGrades.finalExam +
-				"\ntotal grade:\t" + aGrades.totalGrade;
-		assertEquals(s, aGrades.toString());
+		String s = "lab1:\t" + aGrades.getLab1() + "\nlab2:\t" + aGrades.getLab2() + "\nlab3:\t" + aGrades.getLab3() + 
+				"\nmid-term:\t" + aGrades.getMidterm() + "\nfinal exam:\t" + aGrades.getfinalExam() +
+				"\ntotal grade:\t" + aGrades.getTotalGrade();
+		assertEquals(s, aGrades.printGrades());
 	}
 	
 	@Test
