@@ -6,38 +6,54 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Test_showFinishMsg {
+public class Test_showFinishMsg {/*
+Public class Test_showFinishMsg
+	Variables:
+		static UI aUI
+		static ByteArrayInputStream in
+	Methods:
+		public static void setUpBeforeClass()
+		public static void tearDownAfterClass()
+		public void testShowFinishMsg()
+End class Test_showFinishMsg
+*/
+	
 	static UI aUI;
 	static ByteArrayInputStream in;
 
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() throws Exception {/*
+	public static setUpBeforeClass()
+		在建構aUI前先模擬輸入Q(quit)，使他跳出loop以便測試
+	End setUpBeforeClass
+	*/
+	
 		in = new ByteArrayInputStream("Q".getBytes());
 		System.setIn(in);
 		aUI = new UI();
 	}
 
 	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+	public static void tearDownAfterClass() throws Exception {/*
+	public static tearDownAfterClass()
+		將aUI設為null
+	End tearDownAfterClass
+	*/
+		
 		aUI = null;
 	}
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
-	public void testShowFinishMsg() {
+	public void testShowFinishMsg() {/*
+	public testShowFinishMsg
+		預期的輸出應該"End"
+	End testShowFinishMsg
+	*/
+		
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		PrintStream ps = new PrintStream(baos);
 		PrintStream old = System.out;
