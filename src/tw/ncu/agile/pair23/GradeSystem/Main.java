@@ -4,7 +4,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello GradeSystem!");
+		try{
+			new UI();
+		}
+		catch (Exception ex) {
+            System.out.println("something wrong");
+        }
 	}
-
 }

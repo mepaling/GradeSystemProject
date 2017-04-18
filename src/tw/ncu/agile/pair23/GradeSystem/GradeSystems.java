@@ -46,7 +46,7 @@ public class GradeSystems {
 	
 	public LinkedList<Grades> getGradesList () {return new LinkedList<Grades>(this.gradesList);	}
 	public Double[] getWeights() { return this.weights.clone(); }
-	
+
 	public boolean containsID(String id) {
 		for (Grades ele : this.gradesList) {
 			if (ele.getID().equals(id))
@@ -85,7 +85,7 @@ public class GradeSystems {
 		}
 		System.out.println(name + "排名第" + rank.toString());
 	}
-	
+
 	public void updateWeights() {
 		showOldWeights();
 		
@@ -177,4 +177,5 @@ public class GradeSystems {
 			System.out.println("沒有100%");
 		}
 	}
+	
 }
