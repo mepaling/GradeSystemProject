@@ -26,10 +26,12 @@ public class Main {
 			new UI();
 		}
 		catch (NoSuchIDExceptions e1) {
-			e1.printStackTrace();
+			//e1.printStackTrace();
+			System.out.println("ID錯了!");
         }
 		catch (NoSuchCommandExceptions e2) {
-			e2.printStackTrace();
+			//e2.printStackTrace();
+			System.out.println("指令錯了!");
 		}
 	}
 }
