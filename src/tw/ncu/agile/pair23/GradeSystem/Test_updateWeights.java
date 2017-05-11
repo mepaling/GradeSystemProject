@@ -13,9 +13,8 @@ import org.junit.Test;
 /*******************************************************************************
 test case (gradeInput_less.txt):
 ID			name	lab1	lab2	lab3	mid-term	final	total
-962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
-962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
-
+962001044	å‡Œå®—å»·	87		86		98		88			87		88(88.3)
+962001051	æå¨å»·	81		98		84		90			93		91(90.5)
 oldWeights = {0.1, 0.1, 0.1, 0.3, 0.4}
 newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
 expectedOutput:
@@ -50,8 +49,8 @@ public class Test_updateWeights {
 	@Before
 	public void setUp() throws Exception {
 		aGradeSystems = new GradeSystems();
-		case1 = new Grades("962001044", "­â©v§Ê", 87, 86, 98, 88, 87);
-		case2 = new Grades("962001051", "§õ«Â§Ê", 81, 98, 84, 90, 93);
+		case1 = new Grades("962001044", "å‡Œå®—å»·", 87, 86, 98, 88, 87);
+		case2 = new Grades("962001051", "æå¨å»·", 81, 98, 84, 90, 93);
 		oldWeights = new Double[]{0.1, 0.1, 0.1, 0.3, 0.4};
 		case1.calculateTotalGrade(oldWeights);
 		case2.calculateTotalGrade(oldWeights);
@@ -71,21 +70,21 @@ public class Test_updateWeights {
 	public void testUpdateWeights() {
 		/*
 		 * Public testUpdateWeights()
-		 *	§Q¥Î ByteArrayInputStream ¼ÒÀÀ System.in (Áä½Lªº¿é¤J°Ê§@)
-		 * 	±NÅv­«§ï¦¨ {0.2, 0.2, 0.2, 0.2, 0.2}
-		 * 	§Q¥Î aGradeSystems ªº getWeights() ¨ú±o²{¦bªº¤À¼ÆÅv­«
-		 * 	¥Î°j°é¶] ¨Ã½T©w¸Ì­±ªº­È(¤¸¯À)¬O¥¿½Tªº
+		 *	åˆ©ç”¨ ByteArrayInputStream æ¨¡æ“¬ System.in (éµç›¤çš„è¼¸å…¥å‹•ä½œ)
+		 * 	å°‡æ¬Šé‡æ”¹æˆ {0.2, 0.2, 0.2, 0.2, 0.2}
+		 * 	åˆ©ç”¨ aGradeSystems çš„ getWeights() å–å¾—ç¾åœ¨çš„åˆ†æ•¸æ¬Šé‡
+		 * 	ç”¨è¿´åœˆè·‘ ä¸¦ç¢ºå®šè£¡é¢çš„å€¼(å…ƒç´ )æ˜¯æ­£ç¢ºçš„
 		 * End testUpdateWeights()
 		 */
 		
-		//§Q¥Î ByteArrayInputStream ¼ÒÀÀ System.in (Áä½Lªº¿é¤J°Ê§@)
+		//åˆ©ç”¨ ByteArrayInputStream æ¨¡æ“¬ System.in (éµç›¤çš„è¼¸å…¥å‹•ä½œ)
 		ByteArrayInputStream in = new ByteArrayInputStream("20\n20\n20\n20\n20\nY\n".getBytes());
 		System.setIn(in);
 
 		//Do something you need here
 		aGradeSystems.updateWeights();
 
-		//³Ì«á°O±o§â System ªº input §ï¦^ System.in
+		//æœ€å¾Œè¨˜å¾—æŠŠ System çš„ input æ”¹å› System.in
 		System.setIn(System.in);
 		
 		Double[] actual = aGradeSystems.getWeights();

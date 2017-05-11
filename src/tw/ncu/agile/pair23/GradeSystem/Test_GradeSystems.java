@@ -13,12 +13,11 @@ import org.junit.Test;
 /*******************************************************************************
 test case (gradeInput_less.txt):
 ID			name	lab1	lab2	lab3	mid-term	final	total
-962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
-962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
+962001044	å‡Œå®—å»·	87		86		98		88			87		88(88.3)
+962001051	æå¨å»·	81		98		84		90			93		91(90.5)
 weights = {0.1, 0.1, 0.1, 0.3, 0.4}
-
 expectedOutput:
-"0.1 0.1 0.1 0.3 0.4\n962001044 ­â©v§Ê 87 86 98 88 87 88\n962001051 §õ«Â§Ê 81 98 84 90 93 91\n"
+"0.1 0.1 0.1 0.3 0.4\n962001044 å‡Œå®—å»· 87 86 98 88 87 88\n962001051 æå¨å»· 81 98 84 90 93 91\n"
 ********************************************************************************/
 
 public class Test_GradeSystems {
@@ -49,8 +48,8 @@ public class Test_GradeSystems {
 	@Before
 	public void setUp() throws Exception {
 		aGradeSystems = new GradeSystems();
-		case1 = new Grades("962001044", "­â©v§Ê", 87, 86, 98, 88, 87);
-		case2 = new Grades("962001051", "§õ«Â§Ê", 81, 98, 84, 90, 93);
+		case1 = new Grades("962001044", "å‡Œå®—å»·", 87, 86, 98, 88, 87);
+		case2 = new Grades("962001051", "æå¨å»·", 81, 98, 84, 90, 93);
 		weights = new Double[]{0.1, 0.1, 0.1, 0.3, 0.4};
 		case1.calculateTotalGrade(weights);
 		case2.calculateTotalGrade(weights);

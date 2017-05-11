@@ -15,13 +15,12 @@ import org.junit.Test;
 test case:
 weights = {0.1, 0.1, 0.1, 0.3, 0.4}
 #		ID			name	lab1	lab2	lab3	mid-term	final	total
-case1	962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
+case1	962001044	å‡Œå®—å»·	87		86		98		88			87		88(88.3)
 expectedOutput:
-"­â©v§Ê¦¨ÁZ¡Glab1:\t87\nlab2:\t86\nlab3:\t98\nmid-term:\t88\nfinal exam:\t87\ntotal grade:\t88\r\n"
-
-case2	962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
+"å‡Œå®—å»·æˆç¸¾ï¼šlab1:\t87\nlab2:\t86\nlab3:\t98\nmid-term:\t88\nfinal exam:\t87\ntotal grade:\t88\r\n"
+case2	962001051	æå¨å»·	81		98		84		90			93		91(90.5)
 expectedOutput:
-"§õ«Â§Ê¦¨ÁZ¡Glab1:\t81\nlab2:\t98\nlab3:\t84\nmid-term:\t90\nfinal exam:\t93\ntotal grade:\t91\r\n"
+"æå¨å»·æˆç¸¾ï¼šlab1:\t81\nlab2:\t98\nlab3:\t84\nmid-term:\t90\nfinal exam:\t93\ntotal grade:\t91\r\n"
 *******************************************************************************/
 
 public class Test_showGrade {
@@ -53,8 +52,8 @@ public class Test_showGrade {
 	@Before
 	public void setUp() throws Exception {
 		aGradeSystems = new GradeSystems();
-		case1 = new Grades("962001044", "­â©v§Ê", 87, 86, 98, 88, 87);
-		case2 = new Grades("962001051", "§õ«Â§Ê", 81, 98, 84, 90, 93);
+		case1 = new Grades("962001044", "å‡Œå®—å»·", 87, 86, 98, 88, 87);
+		case2 = new Grades("962001051", "æå¨å»·", 81, 98, 84, 90, 93);
 		weights = new Double[]{0.1, 0.1, 0.1, 0.3, 0.4};
 		case1.calculateTotalGrade(weights);
 		case2.calculateTotalGrade(weights);
@@ -81,11 +80,11 @@ public class Test_showGrade {
 		 * End testShowGrade()
 		 */
 		
-		//ª`·N System.out.println() ¬O¦R¥X "\r\n" ¦Ó«D "\n"
-		String expected = case1.getName() + "¦¨ÁZ¡G" + case1.printGrades() + "\r\n";
+		//æ³¨æ„ System.out.println() æ˜¯åå‡º "\r\n" è€Œé "\n"
+		String expected = case1.getName() + "æˆç¸¾ï¼š" + case1.printGrades() + "\r\n";
 		//System.out.print(expected);
 		
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
@@ -93,7 +92,7 @@ public class Test_showGrade {
 		//Do something you need here
 		aGradeSystems.showGrade("962001044");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 		
 		assertEquals(expected, actual);
@@ -112,11 +111,11 @@ public class Test_showGrade {
 		 * End testShowGrade2()
 		 */
 		
-		//ª`·N System.out.println() ¬O¦R¥X "\r\n" ¦Ó«D "\n"
-		String expected = case2.getName() + "¦¨ÁZ¡G" + case2.printGrades() + "\r\n";
+		//æ³¨æ„ System.out.println() æ˜¯åå‡º "\r\n" è€Œé "\n"
+		String expected = case2.getName() + "æˆç¸¾ï¼š" + case2.printGrades() + "\r\n";
 		//System.out.print(expected);
 		
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
@@ -124,7 +123,7 @@ public class Test_showGrade {
 		//Do something you need here
 		aGradeSystems.showGrade("962001051");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 		
 		assertEquals(expected, actual);

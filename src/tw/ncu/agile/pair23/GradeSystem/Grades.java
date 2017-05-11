@@ -4,30 +4,24 @@ import java.math.BigDecimal;
 
 /*******************************************************************************
 class Grades (store Students' Grades)
-¥»Ãş§O Grades ­t³dÀx¦s¦U¤Hªº ¦¨ÁZ
-§Y: ID, name, lab1, lab2, lab3, midTerm, finalExam, totalGrade
-¨Ã¥B¨Ì·Ó¿é¤Jªº Åv­« ¨Ó°µ ¥­§¡¦¨ÁZ ªº ­pºâ (»İ call function ¤~·|­pºâ)
-
-®æ¦¡:	ID			name	lab1	lab2	lab3	midTerm	finalExam
-case 1:	962001044	­â©v§Ê	87		86		98		88		87
-case 2:	962001051	§õ«Â§Ê	81		98		84		90		93
-¥H¤WÅÜ¼Æ¬Ò¬° private, ¶È¯à³z¹L getter »P setter ¨Ó ¨ú±o/­×§ï ¤º®e
-
-¤º§tpublic function¦p¤U:
-Grades()											//ªÅªº«Øºc¤l
-Grades(String, String, int, int, int, int, int)		//¥i¥H«ü©wªì©l­Èªº«Øºc¤l
-
-setGrades(String, String, int, int, int, int, int)	//¤@¦¸³]©w¥ş³¡ value ªº setter
-
-getID(), getName(), getLab1(), getLab2, getLab3,	//¦U private ÅÜ¼Æ
-getMidTerm(), getfinalExam(), getTotalGreade()		//ªº getter
-
-void calculateTotalGrade(Double[])					//¹ïÀx¦sªº¦¨ÁZ»P¿é¤JªºÅv­«­pºâ totalGrade
-String printGrades()								//¥t¤@­Ó¥Î¨Ó print ¦¨ÁZªº¨ç¦¡
-String toString()									//°µ toString() ªº½Æ¼g¥H¦Û­q print ¥X¨Óªº®æ¦¡
-
-¤º§tprotected function¦p¤U:
-int DoubleRoundToInteger							//¿é¤JDouble, ¦^¶Ç Integer ¨Ã±N­È¥|±Ë¤­¤J¨ì¾ã¼Æ¦ì
+æœ¬é¡åˆ¥ Grades è² è²¬å„²å­˜å„äººçš„ æˆç¸¾
+å³: ID, name, lab1, lab2, lab3, midTerm, finalExam, totalGrade
+ä¸¦ä¸”ä¾ç…§è¼¸å…¥çš„ æ¬Šé‡ ä¾†åš å¹³å‡æˆç¸¾ çš„ è¨ˆç®— (éœ€ call function æ‰æœƒè¨ˆç®—)
+æ ¼å¼:	ID			name	lab1	lab2	lab3	midTerm	finalExam
+case 1:	962001044	å‡Œå®—å»·	87		86		98		88		87
+case 2:	962001051	æå¨å»·	81		98		84		90		93
+ä»¥ä¸Šè®Šæ•¸çš†ç‚º private, åƒ…èƒ½é€é getter èˆ‡ setter ä¾† å–å¾—/ä¿®æ”¹ å…§å®¹
+å…§å«public functionå¦‚ä¸‹:
+Grades()											//ç©ºçš„å»ºæ§‹å­
+Grades(String, String, int, int, int, int, int)		//å¯ä»¥æŒ‡å®šåˆå§‹å€¼çš„å»ºæ§‹å­
+setGrades(String, String, int, int, int, int, int)	//ä¸€æ¬¡è¨­å®šå…¨éƒ¨ value çš„ setter
+getID(), getName(), getLab1(), getLab2, getLab3,	//å„ private è®Šæ•¸
+getMidTerm(), getfinalExam(), getTotalGreade()		//çš„ getter
+void calculateTotalGrade(Double[])					//å°å„²å­˜çš„æˆç¸¾èˆ‡è¼¸å…¥çš„æ¬Šé‡è¨ˆç®— totalGrade
+String printGrades()								//å¦ä¸€å€‹ç”¨ä¾† print æˆç¸¾çš„å‡½å¼
+String toString()									//åš toString() çš„è¤‡å¯«ä»¥è‡ªè¨‚ print å‡ºä¾†çš„æ ¼å¼
+å…§å«protected functionå¦‚ä¸‹:
+int DoubleRoundToInteger							//è¼¸å…¥Double, å›å‚³ Integer ä¸¦å°‡å€¼å››æ¨äº”å…¥åˆ°æ•´æ•¸ä½
 *******************************************************************************/
 
 public class Grades {
@@ -35,11 +29,11 @@ public class Grades {
 	private int lab1, lab2, lab3, midTerm, finalExam, totalGrade;
 	
 	/*--------------------------------------
-	 *«ØºcªÅªº¦¨ÁZ Grades instance
-	 *¨Ã°µ¦nªÅªºªì©l¤Æ
+	 *å»ºæ§‹ç©ºçš„æˆç¸¾ Grades instance
+	 *ä¸¦åšå¥½ç©ºçš„åˆå§‹åŒ–
 	 -------------------------------------*/
 	public Grades() {
-		/* ªì©l¤Æ ¦U private ÅÜ¼Æ*/
+		/* åˆå§‹åŒ– å„ private è®Šæ•¸*/
 			this.ID = "";
 			this.name = "";
 			this.lab1 = 0;
@@ -51,21 +45,21 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 *«Øºc Grades instance «á
-	 *©I¥s setGrades() ±N¹ïÀ³ªº­Èªì©l¤Æ
+	 *å»ºæ§‹ Grades instance å¾Œ
+	 *å‘¼å« setGrades() å°‡å°æ‡‰çš„å€¼åˆå§‹åŒ–
 	 -------------------------------------------*/
 	public Grades(String ID, String name, int lab1, int lab2, int lab3, 
 			      int midTerm, int finalExam) {
-		/* ±N¦U°Ñ¼Æ ¥á¨ì setGrades ¨Óªì©l¤Æ¦U private ÅÜ¼Æ */
+		/* å°‡å„åƒæ•¸ ä¸Ÿåˆ° setGrades ä¾†åˆå§‹åŒ–å„ private è®Šæ•¸ */
 			setGrades(ID, name, lab1, lab2, lab3, midTerm, finalExam);
 	}
 	
 	/*-------------------------------------------
-	 * ¹ê»Ú¹ï¸Ó instance «ü©w value ªº method
+	 * å¯¦éš›å°è©² instance æŒ‡å®š value çš„ method
 	 -------------------------------------------*/
 	public void setGrades(String ID, String name, int lab1, int lab2, int lab3, 
 							int midTerm, int finalExam) {
-		/* ±N ¦U¿é¤J°Ñ¼Æªº­È  ¶ñ¤J¨ì ¸Ó instance ªº private ÅÜ¼Æ */
+		/* å°‡ å„è¼¸å…¥åƒæ•¸çš„å€¼  å¡«å…¥åˆ° è©² instance çš„ private è®Šæ•¸ */
 		
 			this.ID = ID;
 			this.name = name;
@@ -78,53 +72,53 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 * ID ªº getter, ¦^¶Ç¸Ó instance ªº ID
+	 * ID çš„ getter, å›å‚³è©² instance çš„ ID
 	 -------------------------------------------*/
 	public String getID() {	return this.ID;	}
 	
 	/*-------------------------------------------
-	 * name ªº getter, ¦^¶Ç¸Ó instance ªº name
+	 * name çš„ getter, å›å‚³è©² instance çš„ name
 	 -------------------------------------------*/
 	public String getName() { return this.name;}
 	
 	/*-------------------------------------------
-	 * Lab1 ªº getter, ¦^¶Ç¸Ó instance ªº Lab1 
+	 * Lab1 çš„ getter, å›å‚³è©² instance çš„ Lab1 
 	 -------------------------------------------*/
 	public int getLab1() { return this.lab1; }
 	
 	/*-------------------------------------------
-	 * Lab2 ªº getter, ¦^¶Ç¸Ó instance ªº Lab2
+	 * Lab2 çš„ getter, å›å‚³è©² instance çš„ Lab2
 	 -------------------------------------------*/
 	public int getLab2() { return this.lab2; }
 	
 	/*-------------------------------------------
-	 * Lab3 ªº getter, ¦^¶Ç¸Ó instance ªº Lab3
+	 * Lab3 çš„ getter, å›å‚³è©² instance çš„ Lab3
 	 -------------------------------------------*/
 	public int getLab3() { return this.lab3; }
 	
 	/*-------------------------------------------
-	 * midTerm ªº getter, ¦^¶Ç¸Ó instance ªº midTerm
+	 * midTerm çš„ getter, å›å‚³è©² instance çš„ midTerm
 	 -------------------------------------------*/
 	public int getMidterm() { return this.midTerm; }
 	
 	/*-------------------------------------------
-	 * finalExam ªº getter, ¦^¶Ç¸Ó instance ªº finalExam 
+	 * finalExam çš„ getter, å›å‚³è©² instance çš„ finalExam 
 	 -------------------------------------------*/
 	public int getfinalExam() { return this.finalExam; }
 	
 	/*-------------------------------------------
-	 * totalGrade ªº getter, ¦^¶Ç¸Ó instance ªº totalGrade
+	 * totalGrade çš„ getter, å›å‚³è©² instance çš„ totalGrade
 	 -------------------------------------------*/
 	public int getTotalGrade() { return this.totalGrade; }
 	
 	/*-------------------------------------------
-	 * ®Ú¾Ú¿é¤Jªº  weights ªº double array
-	 * ­pºâ¹ïÀ³ªº totalGrades
-	 * ¨Ã¨Ï¥Î DoubleRoundToInteger() Âà¦¨¾ã¼Æ
-	 * ³Ì«á±N totalGrades ¶ñ¤J¸Ó instance ªº totalGradeÄæ¦ì
+	 * æ ¹æ“šè¼¸å…¥çš„  weights çš„ double array
+	 * è¨ˆç®—å°æ‡‰çš„ totalGrades
+	 * ä¸¦ä½¿ç”¨ DoubleRoundToInteger() è½‰æˆæ•´æ•¸
+	 * æœ€å¾Œå°‡ totalGrades å¡«å…¥è©² instance çš„ totalGradeæ¬„ä½
 	 -------------------------------------------*/
 	public void calculateTotalGrade(Double[] weights) {
-		/* ®Ú¾Ú¿é¤Jªº weights ­pºâ¹ïÀ³ªº totalGrades */
+		/* æ ¹æ“šè¼¸å…¥çš„ weights è¨ˆç®—å°æ‡‰çš„ totalGrades */
 		
 			Double total = this.lab1*weights[0] + this.lab2*weights[1] + this.lab3*weights[2]+
 					  		this.midTerm*weights[3] + this.finalExam*weights[4];
@@ -132,7 +126,7 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 * ¦^¶Ç «ü©w®æ¦¡ªº Grades ªº¦r¦ê 
+	 * å›å‚³ æŒ‡å®šæ ¼å¼çš„ Grades çš„å­—ä¸² 
 	 -------------------------------------------*/
 	public String printGrades() {
 		return "lab1:\t" + this.lab1 + "\nlab2:\t" + this.lab2 + "\nlab3:\t" + this.lab3 + 
@@ -141,7 +135,7 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 * ¦^¶Ç³o­Ó instance ²{¦b©Ò¦³ªº private variable
+	 * å›å‚³é€™å€‹ instance ç¾åœ¨æ‰€æœ‰çš„ private variable
 	 -------------------------------------------*/
 	public String toString(){
 		return this.ID + " " + this.name + " " + this.lab1 + " " + this.lab2 + " " + this.lab3 + 
@@ -149,8 +143,8 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 * ¿é¤J ¤@­Ó Double value
-	 * ¦^¶Ç¨ä¥|±Ë¤­¤J¨ì "¾ã¼Æ¦ì" ªº integer 
+	 * è¼¸å…¥ ä¸€å€‹ Double value
+	 * å›å‚³å…¶å››æ¨äº”å…¥åˆ° "æ•´æ•¸ä½" çš„ integer 
 	 -------------------------------------------*/
 	int DoubleRoundToInteger(Double aDouble) {
 		BigDecimal aBigDecimal = new BigDecimal(aDouble.toString()).setScale(0, BigDecimal.ROUND_HALF_UP);

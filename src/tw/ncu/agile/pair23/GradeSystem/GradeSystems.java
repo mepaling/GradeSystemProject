@@ -7,29 +7,26 @@ import java.math.BigDecimal;
 
 /*******************************************************************************
 class GradeSystems 
-¥» class Àx¦s a list of student grades ¥H¤Î¸Ó system ªº¦U¤À¼Æ¥e¤ÀÅv­«
-ÅÜ¼Æ:
-weights		//Double °}¦C, ¦s©ñ¦U¤À¼Æ¹ïÀ³Åv­«
-gradesList 	//Grades ªº LinkedList, ¦s©ñ©Ò¦³ªº GradesÅÜ¼Æ
-
-®æ¦¡¦p¤U:
-962001044 ­â©v§Ê 87 86 98 88 87
-962001051 §õ«Â§Ê 81 98 84 90 93
-
-¤º§tpublic function¦p¤U:
-GradeSystems()				//«Øºc¤l, ÅªÀÉ(ÀÉ¦W: gradeInput_less.txt )¨Ã¼g¨ì GradeSystems ¤¤
-GradeSystems(fileName)		//«Øºc¤l, ÅªÀÉ(ÀÉ¦W: fileName )¨Ã¼g¨ì GradeSystems ¤¤
-containsID(ID)				//¬İ aGradeSystem ¬O§_¾Ö¦³¦¹ ID
-showGrade(ID)				//Åã¥Ü¸Ó IDªº¤À¼Æ
-showRank(ID)				//Åã¥Ü¸ÓIDªº¦W¦¸
-updateWeights()				//§ó§ï¦¨·sªºÅv­«
-
-¤º§tprotected function¦p¤U:
-ConstructFromFile			//«Øºc¥Îmethod
-DoubleRoundToInteger		//¿é¤JDouble, ¿é¥X Integer ¨Ã¹ï¼Æ­È°µ¥|±Ë¤­¤J¨ì¾ã¼Æ¦ì
-showOldWeights				//updateWeights¥Î
-getNewWeights				//updateWeights¥Î
-setWeights					//updateWeights¥Î
+æœ¬ class å„²å­˜ a list of student grades ä»¥åŠè©² system çš„å„åˆ†æ•¸å åˆ†æ¬Šé‡
+è®Šæ•¸:
+weights		//Double é™£åˆ—, å­˜æ”¾å„åˆ†æ•¸å°æ‡‰æ¬Šé‡
+gradesList 	//Grades çš„ LinkedList, å­˜æ”¾æ‰€æœ‰çš„ Gradesè®Šæ•¸
+æ ¼å¼å¦‚ä¸‹:
+962001044 å‡Œå®—å»· 87 86 98 88 87
+962001051 æå¨å»· 81 98 84 90 93
+å…§å«public functionå¦‚ä¸‹:
+GradeSystems()				//å»ºæ§‹å­, è®€æª”(æª”å: gradeInput_less.txt )ä¸¦å¯«åˆ° GradeSystems ä¸­
+GradeSystems(fileName)		//å»ºæ§‹å­, è®€æª”(æª”å: fileName )ä¸¦å¯«åˆ° GradeSystems ä¸­
+containsID(ID)				//çœ‹ aGradeSystem æ˜¯å¦æ“æœ‰æ­¤ ID
+showGrade(ID)				//é¡¯ç¤ºè©² IDçš„åˆ†æ•¸
+showRank(ID)				//é¡¯ç¤ºè©²IDçš„åæ¬¡
+updateWeights()				//æ›´æ”¹æˆæ–°çš„æ¬Šé‡
+å…§å«protected functionå¦‚ä¸‹:
+ConstructFromFile			//å»ºæ§‹ç”¨method
+DoubleRoundToInteger		//è¼¸å…¥Double, è¼¸å‡º Integer ä¸¦å°æ•¸å€¼åšå››æ¨äº”å…¥åˆ°æ•´æ•¸ä½
+showOldWeights				//updateWeightsç”¨
+getNewWeights				//updateWeightsç”¨
+setWeights					//updateWeightsç”¨
 *******************************************************************************/
 
 public class GradeSystems {
@@ -38,9 +35,9 @@ public class GradeSystems {
 	public String queryName;
 	
 	/*--------------------------------------
-	 * ©I¥s ConstructFromFile(gradeInput_less.txt)
-	 * ±q gradeInput_less.txt
-	 * «Øºc GradeSystems ÅÜ¼Æ
+	 * å‘¼å« ConstructFromFile(gradeInput_less.txt)
+	 * å¾ gradeInput_less.txt
+	 * å»ºæ§‹ GradeSystems è®Šæ•¸
 	 -------------------------------------*/
 	public GradeSystems() {
 		/* Call ConstructFromFile(filename=gradeInput_less.txt) */
@@ -49,9 +46,9 @@ public class GradeSystems {
 	}
 	
 	/*--------------------------------------
-	 * ©I¥s ConstructFromFile(fileName)
-	 * ±q fileName ³o­ÓÀÉ®×
-	 * «Øºc GradeSystems ÅÜ¼Æ
+	 * å‘¼å« ConstructFromFile(fileName)
+	 * å¾ fileName é€™å€‹æª”æ¡ˆ
+	 * å»ºæ§‹ GradeSystems è®Šæ•¸
 	 -------------------------------------*/
 	public GradeSystems(String fileName) {
 		/* Call ConstructFromFile(filename) */
@@ -60,28 +57,28 @@ public class GradeSystems {
 	}
 	
 	/*--------------------------------------
-	 * ³o¬O gradesList ªº getter
-	 * ¦^¶Ç¸Ó instance ªº gradesList LinkedList
+	 * é€™æ˜¯ gradesList çš„ getter
+	 * å›å‚³è©² instance çš„ gradesList LinkedList
 	 -------------------------------------*/
 	public LinkedList<Grades> getGradesList () {return this.gradesList;	}
 	
 	/*--------------------------------------
-	 * ³o¬O getWeights ªº getter
-	 * ¦^¶Ç ¸Ó instance ªº weights array
+	 * é€™æ˜¯ getWeights çš„ getter
+	 * å›å‚³ è©² instance çš„ weights array
 	 -------------------------------------*/
 	public Double[] getWeights() { return this.weights; }
 	
 	/* 
-	 * §PÂ_¸Ó GradeSystems ¦³¨S¦³³o­Ó givenID ¦s¦b,
-	 * ¦³ªº¸Ü return true, ¹w³]¬O return false
+	 * åˆ¤æ–·è©² GradeSystems æœ‰æ²’æœ‰é€™å€‹ givenID å­˜åœ¨,
+	 * æœ‰çš„è©± return true, é è¨­æ˜¯ return false
 	 */
 	public boolean containsID(String id) {
-		/*	for ¤¸¯À in GradesList:
-				if ¤¸¯À.ID == givenID:
+		/*	for å…ƒç´  in GradesList:
+				if å…ƒç´ .ID == givenID:
 					return true
 				end if
 			end for
-			¹w³] return false
+			é è¨­ return false
 		*/
 			for (Grades ele : this.gradesList) {
 				if (ele.getID().equals(id)) {
@@ -93,22 +90,22 @@ public class GradeSystems {
 	}
 	
 	/*--------------------------------------
-	 * showGrade(ID) ¥Î¨ÓÅã¥Ü givenID ªº¹ïÀ³¦¨ÁZ 
+	 * showGrade(ID) ç”¨ä¾†é¡¯ç¤º givenID çš„å°æ‡‰æˆç¸¾ 
 	 -------------------------------------*/
 	public void showGrade(String id) {
-		/*	for ¤¸¯À in GradesList:
-				if ¤¸¯À.id == givenID:
-					­pºâ ¤¸¯À.totalGrade(weights)
-					°µ§¹¥H«áª½±µ±q for-loop ¸õÂ÷
+		/*	for å…ƒç´  in GradesList:
+				if å…ƒç´ .id == givenID:
+					è¨ˆç®— å…ƒç´ .totalGrade(weights)
+					åšå®Œä»¥å¾Œç›´æ¥å¾ for-loop è·³é›¢
 				end if
 		   	end for
-		   	¦b¿Ã¹õ¤WÅã¥Ü
+		   	åœ¨è¢å¹•ä¸Šé¡¯ç¤º
 		*/
 			String ret = "";
 			for (Grades ele : this.gradesList) {
 				if (ele.getID().equals(id)) {
 					ele.calculateTotalGrade(this.weights);
-					ret = ele.getName() + "¦¨ÁZ¡G" + ele.printGrades();
+					ret = ele.getName() + "æˆç¸¾ï¼š" + ele.printGrades();
 					break;
 				}
 			}
@@ -116,17 +113,17 @@ public class GradeSystems {
 	}
 	
 	/*--------------------------------------
-	 * showRank(ID) ¥Î¨ÓÅã¥Ü givenID ªº¹ïÀ³±Æ¦W
+	 * showRank(ID) ç”¨ä¾†é¡¯ç¤º givenID çš„å°æ‡‰æ’å
 	 -------------------------------------*/
 	public void showRank(String id) {
-		/*	¥O rank ¬° 1
-		 	¨ú±o¸Ó givenID ªº totalGrade
-			for ¤¸¯À in GradesList:
-				if ¤¸¯À.totalGrade > givenID.totalGrade
-					rank += 1 (°h 1 ¦W)
+		/*	ä»¤ rank ç‚º 1
+		 	å–å¾—è©² givenID çš„ totalGrade
+			for å…ƒç´  in GradesList:
+				if å…ƒç´ .totalGrade > givenID.totalGrade
+					rank += 1 (é€€ 1 å)
 				end if
 			end for
-			show givenID ªº rank
+			show givenID çš„ rank
 		*/
 			Integer rank = 1;
 			String name = "";
@@ -143,18 +140,18 @@ public class GradeSystems {
 					rank++;
 				}
 			}
-			System.out.println(name + "±Æ¦W²Ä" + rank.toString());
+			System.out.println(name + "æ’åç¬¬" + rank.toString());
 	}
 	
 	/*--------------------------------------
-	 * §ó·sÅv­«¥H«á°O±o§ó·s¦U ID ªº totalGrade
+	 * æ›´æ–°æ¬Šé‡ä»¥å¾Œè¨˜å¾—æ›´æ–°å„ ID çš„ totalGrade
 	 -------------------------------------*/
 	public void updateWeights() {
-		/*	©I¥s showOldWeights
-			©I¥s getNewWeights
-			©I¥s setWeights
+		/*	å‘¼å« showOldWeights
+			å‘¼å« getNewWeights
+			å‘¼å« setWeights
 			loop aGrade in GradesList
-				©I¥s aGrade.calculateTotalGrade(²{¦bªº weights)
+				å‘¼å« aGrade.calculateTotalGrade(ç¾åœ¨çš„ weights)
 			end loop
 		*/
 			showOldWeights();
@@ -162,13 +159,13 @@ public class GradeSystems {
 			Scanner sc = new Scanner(System.in);
 			Integer newWeight[] = getNewWeights(sc);
 			
-			String str = "½Ğ½T»{·s°t¤À\n" + "lab1\t" + newWeight[0] + "%\n" + 
+			String str = "è«‹ç¢ºèªæ–°é…åˆ†\n" + "lab1\t" + newWeight[0] + "%\n" + 
 					"lab2\t" + newWeight[1] + "%\n" +
 					"lab3\t" + newWeight[2] + "%\n" +
 					"mid-term\t" + newWeight[3] + "%\n" +
 					"fianl exam\t" + newWeight[4] + "%\n" + 
-					"¥H¤W¥¿½T¶Ü? Y(Yes) ©Î N(No)\n" + 
-					"¨Ï¥ÎªÌ¿é¤J¡G";
+					"ä»¥ä¸Šæ­£ç¢ºå—? Y(Yes) æˆ– N(No)\n" + 
+					"ä½¿ç”¨è€…è¼¸å…¥ï¼š";
 			System.out.print(str);
 			
 			String comString = sc.nextLine();
@@ -183,21 +180,21 @@ public class GradeSystems {
 	}
 	
 	/*--------------------------------------
-	 * ®Ú¾Úµ¹ªº fileName (ex: a.txt) ¨Ó¶}±Ò¹ïÀ³ªºÀÉ®×
-	 * ¨Ã±qÀÉ®×¸ê°T«Øºc aGradeSystem
+	 * æ ¹æ“šçµ¦çš„ fileName (ex: a.txt) ä¾†é–‹å•Ÿå°æ‡‰çš„æª”æ¡ˆ
+	 * ä¸¦å¾æª”æ¡ˆè³‡è¨Šå»ºæ§‹ aGradeSystem
 	 -------------------------------------*/
 	void ConstructFromFile(String fileName) {
 		/*	try {
-				¶}ÀÉ(fileString)
-				loop ¤@¦æ¤@¦æÅªÀÉ:
-					new ¤@­Ó·sªº Grades instance (aGrade)
-					±N¹ïÀ³¸ê°T¶ñ¤J¸Ó aGrade (§Q¥Î¨ä«Øºc¤l)
-					¶¶«K®Ú¾Ú²{¦bªº weights ºâ totalGrade
-					±N¸Óinstance ¥[¤J gradesList
+				é–‹æª”(fileString)
+				loop ä¸€è¡Œä¸€è¡Œè®€æª”:
+					new ä¸€å€‹æ–°çš„ Grades instance (aGrade)
+					å°‡å°æ‡‰è³‡è¨Šå¡«å…¥è©² aGrade (åˆ©ç”¨å…¶å»ºæ§‹å­)
+					é †ä¾¿æ ¹æ“šç¾åœ¨çš„ weights ç®— totalGrade
+					å°‡è©²instance åŠ å…¥ gradesList
 				end loop
-				ÃöÀÉ
+				é—œæª”
 			}
-			catch Exception { ±N exception ¸ê°T¦L¥X¨Ó}
+			catch Exception { å°‡ exception è³‡è¨Šå°å‡ºä¾†}
 		*/
 			try {
 				File file = new File(fileName);
@@ -219,8 +216,8 @@ public class GradeSystems {
 	}
 	
 	/*-------------------------------------------
-	 * ¿é¤J ¤@­Ó Double value
-	 * ¦^¶Ç¨ä¥|±Ë¤­¤J¨ì "¾ã¼Æ¦ì" ªº integer 
+	 * è¼¸å…¥ ä¸€å€‹ Double value
+	 * å›å‚³å…¶å››æ¨äº”å…¥åˆ° "æ•´æ•¸ä½" çš„ integer 
 	 -------------------------------------------*/
 	int DoubleRoundToInteger(Double aDouble) {
 		BigDecimal aBigDecimal = new BigDecimal(aDouble.toString()).setScale(0, BigDecimal.ROUND_HALF_UP);
@@ -229,11 +226,11 @@ public class GradeSystems {
 	}
 	
 	/*-------------------------------------------
-	 * ¦L¥XÂÂÅv­«
+	 * å°å‡ºèˆŠæ¬Šé‡
 	 -------------------------------------------*/
 	void showOldWeights() {
-		/*	Print ÂÂÅv­« */
-			String str = "ÂÂ°t¤À\n" +
+		/*	Print èˆŠæ¬Šé‡ */
+			String str = "èˆŠé…åˆ†\n" +
 					"lab1\t" + DoubleRoundToInteger(this.weights[0]*100) + "%\n" + 
 					"lab2\t" + DoubleRoundToInteger(this.weights[1]*100) + "%\n" +
 					"lab3\t" + DoubleRoundToInteger(this.weights[2]*100) + "%\n" +
@@ -243,13 +240,13 @@ public class GradeSystems {
 	}
 
 	/*-------------------------------------------
-	 * ±q¿é¤J®³¨ì·sÅv­«
+	 * å¾è¼¸å…¥æ‹¿åˆ°æ–°æ¬Šé‡
 	 -------------------------------------------*/
 	Integer[] getNewWeights(Scanner sc) {
-		/*	Get ·sÅv­« by scanner */
+		/*	Get æ–°æ¬Šé‡ by scanner */
 		
 			Integer newWeight[] = {0, 0, 0, 0, 0};
-			System.out.print("¿é¤J·s°t¤À\nlab1\t");
+			System.out.print("è¼¸å…¥æ–°é…åˆ†\nlab1\t");
 			newWeight[0] = Integer.parseInt(sc.nextLine());
 			System.out.print("lab2\t");
 			newWeight[1] = Integer.parseInt(sc.nextLine());
@@ -263,14 +260,14 @@ public class GradeSystems {
 	}
 
 	/*-------------------------------------------
-	 * ³]©w·sÅv­« §Y weights ªº setter
+	 * è¨­å®šæ–°æ¬Šé‡ å³ weights çš„ setter
 	 -------------------------------------------*/
 	void setWeights(Integer[] newWeights) {
-		/* ¥ı§PÂ_ Åv­«¥[°_¨Ó¦³¨S¦³ 100%
-		 * ¦pªG¦³
-		 * set Åv­«array ¨ì this.weights array
-		 * ¨S¦³
-		 * print "¨S¦³ 100%"
+		/* å…ˆåˆ¤æ–· æ¬Šé‡åŠ èµ·ä¾†æœ‰æ²’æœ‰ 100%
+		 * å¦‚æœæœ‰
+		 * set æ¬Šé‡array åˆ° this.weights array
+		 * æ²’æœ‰
+		 * print "æ²’æœ‰ 100%"
 		 */
 			int all = 0;
 			for (int w : newWeights) {
@@ -283,7 +280,7 @@ public class GradeSystems {
 				}
 			}
 			else {
-				System.out.println("¨S¦³100%");
+				System.out.println("æ²’æœ‰100%");
 			}
 	}
 	

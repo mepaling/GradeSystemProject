@@ -14,13 +14,12 @@ import org.junit.Test;
 /*******************************************************************************
 test case (gradeInput_less.txt):
 #		ID			name	lab1	lab2	lab3	mid-term	final	total		rank
-case1	962001044	­â©v§Ê	87		86		98		88			87		88(88.3)	2
+case1	962001044	å‡Œå®—å»·	87		86		98		88			87		88(88.3)	2
 expectedOutput:
-"­â©v§Ê±Æ¦W²Ä2\r\n"
-
-case2	962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)	1
+"å‡Œå®—å»·æ’åç¬¬2\r\n"
+case2	962001051	æå¨å»·	81		98		84		90			93		91(90.5)	1
 expectedOutput:
-"§õ«Â§Ê±Æ¦W²Ä1\r\n"
+"æå¨å»·æ’åç¬¬1\r\n"
 *******************************************************************************/
 
 public class Test_showRank {
@@ -60,24 +59,24 @@ public class Test_showRank {
 
 		/*
 		 * Public testShowRank()
-		 * 	§ï±¼System.out¥h¦¬¥»¨ÓÅã¥Ü¦bconsoleªº¦r, °O±o§ï¦^¨Ó!
-		 * 	¤ñ¹ï»P¹w´ÁªºRank¬O§_¬Û¦P
-		 * 	­â©v§Ê rank=2
+		 * 	æ”¹æ‰System.outå»æ”¶æœ¬ä¾†é¡¯ç¤ºåœ¨consoleçš„å­—, è¨˜å¾—æ”¹å›ä¾†!
+		 * 	æ¯”å°èˆ‡é æœŸçš„Rankæ˜¯å¦ç›¸åŒ
+		 * 	å‡Œå®—å»· rank=2
 		 * End testShowRank()
 		 */
 		
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
 		System.setOut(myOut);
 		aGradeSystems.showRank("962001044");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 		
 		// "\r\n" not "\n"
-		String expected = "­â©v§Ê±Æ¦W²Ä2\r\n";
+		String expected = "å‡Œå®—å»·æ’åç¬¬2\r\n";
 		assertEquals(expected, actual);
 	}
 	
@@ -85,24 +84,24 @@ public class Test_showRank {
 	public void testShowRank2() {
 		/*
 		 * Public testShowRank2()
-		 * 	§ï±¼System.out¥h¦¬¥»¨ÓÅã¥Ü¦bconsoleªº¦r, °O±o§ï¦^¨Ó!
-		 * 	¤ñ¹ï»P¹w´ÁªºRank¬O§_¬Û¦P
-		 * 	§õ«Â§Ê rank=1
+		 * 	æ”¹æ‰System.outå»æ”¶æœ¬ä¾†é¡¯ç¤ºåœ¨consoleçš„å­—, è¨˜å¾—æ”¹å›ä¾†!
+		 * 	æ¯”å°èˆ‡é æœŸçš„Rankæ˜¯å¦ç›¸åŒ
+		 * 	æå¨å»· rank=1
 		 * End testShowRank2()
 		 */
 		
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
 		System.setOut(myOut);
 		aGradeSystems.showRank("962001051");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 
 		// "\r\n" not "\n"
-		String expected = "§õ«Â§Ê±Æ¦W²Ä1\r\n";
+		String expected = "æå¨å»·æ’åç¬¬1\r\n";
 		assertEquals(expected, actual);
 	}
 

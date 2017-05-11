@@ -54,8 +54,8 @@ public class GradesTest {
 	public void testGrades() {
 		/*
 		 * public void testGrades()
-		 * 	«Ø¥ß¥t¤@­Ó Grades ÅÜ¼Æ
-		 * 	­n¦³ªF¦è¦s¦b¤~¹ï
+		 * 	å»ºç«‹å¦ä¸€å€‹ Grades è®Šæ•¸
+		 * 	è¦æœ‰æ±è¥¿å­˜åœ¨æ‰å°
 		 * End testGrades()
 		 */
 		Grades bGrades = new Grades();
@@ -66,7 +66,7 @@ public class GradesTest {
 	public void testGradesStringStringIntIntIntIntInt() {
 		/*
 		 * public void testGradesStringStringIntIntIntIntInt()
-		 * 	­n¦³ªF¦è¦s¦b¤~¹ï
+		 * 	è¦æœ‰æ±è¥¿å­˜åœ¨æ‰å°
 		 * End testGradesStringStringIntIntIntIntInt()
 		 */
 		assertNotNull("aGrades should be created!", aGrades);
@@ -76,7 +76,7 @@ public class GradesTest {
 	public void testCalculateTotalGrade() {
 		/*
 		 * public void testCalculateTotalGrade()
-		 * 	©M¤âºâ¹ï¤ñ ­È­n¤@¼Ë¤~¹ï
+		 * 	å’Œæ‰‹ç®—å°æ¯” å€¼è¦ä¸€æ¨£æ‰å°
 		 * End testCalculateTotalGrade()
 		 */
 		double total_hand_cal_double = aGrades.getLab1()*weights[0] + aGrades.getLab2()*weights[1]+ 
@@ -91,8 +91,8 @@ public class GradesTest {
 	public void testPrintGrades() {
 		/*
 		 * public void testToString()
-		 * 	½Æ¼g object ªº toString method
-		 * 	©M¤â±Æª©¹ï¤ñ ­È­n¤@¼Ë¤~¹ï
+		 * 	è¤‡å¯« object çš„ toString method
+		 * 	å’Œæ‰‹æ’ç‰ˆå°æ¯” å€¼è¦ä¸€æ¨£æ‰å°
 		 * End testToString()
 		 */
 		String s = "lab1:\t" + aGrades.getLab1() + "\nlab2:\t" + aGrades.getLab2() + "\nlab3:\t" + aGrades.getLab3() + 
@@ -105,8 +105,8 @@ public class GradesTest {
 	public void testDoubleRoundToInteger1() {
 		/*
 		 * public void testDoubleRoundToInteger1()
-		 * 	¥|±Ë¤­¤J¨ì¾ã¼Æ¦ì - ¶i¦ì
-		 * 	©M¤âºâª©¹ï¤ñ ­È­n¤@¼Ë¤~¹ï
+		 * 	å››æ¨äº”å…¥åˆ°æ•´æ•¸ä½ - é€²ä½
+		 * 	å’Œæ‰‹ç®—ç‰ˆå°æ¯” å€¼è¦ä¸€æ¨£æ‰å°
 		 * End testDoubleRoundToInteger1()
 		 */
 		int test1_int = aGrades.DoubleRoundToInteger(94.87);
@@ -118,8 +118,8 @@ public class GradesTest {
 	public void testDoubleRoundToInteger2() {
 		/*
 		 * public void testDoubleRoundToInteger2()
-		 * 	¥|±Ë¤­¤J¨ì¾ã¼Æ¦ì - ±Ë¥h
-		 * 	©M¤âºâª©¹ï¤ñ ­È­n¤@¼Ë¤~¹ï
+		 * 	å››æ¨äº”å…¥åˆ°æ•´æ•¸ä½ - æ¨å»
+		 * 	å’Œæ‰‹ç®—ç‰ˆå°æ¯” å€¼è¦ä¸€æ¨£æ‰å°
 		 * End testDoubleRoundToInteger2()
 		 */
 		int test1_int = aGrades.DoubleRoundToInteger(94.47);
@@ -131,8 +131,8 @@ public class GradesTest {
 	public void testDoubleRoundToInteger3() {
 		/*
 		 * public void testDoubleRoundToInteger3()
-		 * 	¥|±Ë¤­¤J¨ì¾ã¼Æ¦ì - ±Ë¥h
-		 * 	©M¤âºâª©¹ï¤ñ ­È­n¤@¼Ë¤~¹ï
+		 * 	å››æ¨äº”å…¥åˆ°æ•´æ•¸ä½ - æ¨å»
+		 * 	å’Œæ‰‹ç®—ç‰ˆå°æ¯” å€¼è¦ä¸€æ¨£æ‰å°
 		 * End testDoubleRoundToInteger3()
 		 */
 		int test1_int = aGrades.DoubleRoundToInteger(87.087);

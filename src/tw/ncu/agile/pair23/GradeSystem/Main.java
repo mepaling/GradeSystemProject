@@ -1,14 +1,13 @@
 package tw.ncu.agile.pair23.GradeSystem;
 
 /** ##################################################################
-¥»	Grade system Åı¨Ï¥ÎªÌ(¾Ç¥Í)¨ú±o¥LªºÁ`¦¨ÁZ total grade ¤Î±Æ¦W rank.
-	Total grade °ò©ó°t¤À weights ¨Óºâ ¦Ó weights ¥i¥H update.
-	Rank ªí¥Ü¦¹ total grade ¦b¥ş¯Z¾Ç¥Íªº¤À¼Æ±Æ§Ç
-
-Input file: ¥ş¯Z¾Ç¥Íªº¤À¼Æ ¨Ò¦p
-			962001044 ­â©v§Ê 87 86 98 88 87
-			962001051 §õ«Â§Ê 81 98 84 90 93
-ª`·N data field names ¦p¤U: 
+æœ¬	Grade system è®“ä½¿ç”¨è€…(å­¸ç”Ÿ)å–å¾—ä»–çš„ç¸½æˆç¸¾ total grade åŠæ’å rank.
+	Total grade åŸºæ–¼é…åˆ† weights ä¾†ç®— è€Œ weights å¯ä»¥ update.
+	Rank è¡¨ç¤ºæ­¤ total grade åœ¨å…¨ç­å­¸ç”Ÿçš„åˆ†æ•¸æ’åº
+Input file: å…¨ç­å­¸ç”Ÿçš„åˆ†æ•¸ ä¾‹å¦‚
+			962001044 å‡Œå®—å»· 87 86 98 88 87
+			962001051 æå¨å»· 81 98 84 90 93
+æ³¨æ„ data field names å¦‚ä¸‹: 
 				ID name lab1 lab2 lab3 midTerm finalExam
 #################################################################### */
 
@@ -16,22 +15,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		/* 	try {
-		 		call UI() «Øºc  aUI
+		 		call UI() å»ºæ§‹  aUI
 		 	}
 		 	end try
-		 	catch (NoSuchIDExceptions       e1) {print msg1} //ex ID¿ù¤F!
-			catch (NoSuchCommandExceptions e2) {print msg2}//ex«ü¥O¿ù¤F!
+		 	catch (NoSuchIDExceptions       e1) {print msg1} //ex IDéŒ¯äº†!
+			catch (NoSuchCommandExceptions e2) {print msg2}//exæŒ‡ä»¤éŒ¯äº†!
 			end class Main
-
 		 */
-		//try{
+		try{
 			new UI();
-		//}
-		/*catch (NoSuchIDExceptions e1) {
+		}
+		catch (NoSuchIDExceptions e1) {
 			e1.printStackTrace();
         }
 		catch (NoSuchCommandExceptions e2) {
 			e2.printStackTrace();
-		}*/
+		}
 	}
 }

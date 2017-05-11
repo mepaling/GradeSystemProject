@@ -14,8 +14,8 @@ import org.junit.Test;
 
 /*
  * test case (gradeInput_less.txt):
- * 962001044 ­â©v§Ê 87 86 98 88 87 -> 88.3, 89.2
- * 962001051 §õ«Â§Ê 81 98 84 90 93 -> 90.5, 89.2
+ * 962001044 å‡Œå®—å»· 87 86 98 88 87 -> 88.3, 89.2
+ * 962001051 æå¨å»· 81 98 84 90 93 -> 90.5, 89.2
  * weights = {0.1, 0.1, 0.1, 0.3, 0.4}
  * newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
  */
@@ -44,8 +44,8 @@ public class GradeSystemsTest {
 	Double[] newWeights = {0.2, 0.2, 0.2, 0.2, 0.2};
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		grades1 = new Grades("962001044", "­â©v§Ê", 87, 86, 98, 88, 87);
-		grades2 = new Grades("962001051", "§õ«Â§Ê", 81, 98, 84, 90, 93);
+		grades1 = new Grades("962001044", "å‡Œå®—å»·", 87, 86, 98, 88, 87);
+		grades2 = new Grades("962001051", "æå¨å»·", 81, 98, 84, 90, 93);
 	}
 
 	@AfterClass
@@ -68,8 +68,8 @@ public class GradeSystemsTest {
 	public void testGradeSystems() {
 		/*
 		 * Public testGradeSystems()
-		 * 	«ØºcaGradeSystems
-		 * 	À³¸Ó­n¦³ªF¦è¦Ó«Dnull
+		 * 	å»ºæ§‹aGradeSystems
+		 * 	æ‡‰è©²è¦æœ‰æ±è¥¿è€Œénull
 		 * End testGradeSystems()
 		 */
 		assertNotNull("aGradeSystems should be created!", aGradeSystems);
@@ -79,7 +79,7 @@ public class GradeSystemsTest {
 	public void testContainsID_NO() {
 		/*
 		 * Public testContainsID_NO()
-		 * 	¤£À³¸Ó­n¦³ "105522000" ³o­ÓID, ©Ò¥H¬OFalse
+		 * 	ä¸æ‡‰è©²è¦æœ‰ "105522000" é€™å€‹ID, æ‰€ä»¥æ˜¯False
 		 * End testContainsID_NO()
 		 */
 		assertFalse(aGradeSystems.containsID("105522000"));
@@ -89,7 +89,7 @@ public class GradeSystemsTest {
 	public void testContainsID_YES() {
 		/*
 		 * Public testContainsID_YES()
-		 * 	À³¸Ó­n¦³ "962001044" ³o­ÓID, ©Ò¥H¬OTrue
+		 * 	æ‡‰è©²è¦æœ‰ "962001044" é€™å€‹ID, æ‰€ä»¥æ˜¯True
 		 * End testContainsID_YES()
 		 */
 		assertTrue(aGradeSystems.containsID("962001044"));
@@ -99,15 +99,15 @@ public class GradeSystemsTest {
 	public void testShowGrade() {
 		/*
 		 * Public testShowGrade()
-		 * 	§ï±¼System.out¥h¦¬¥»¨ÓÅã¥Ü¦bconsoleªº¦r, °O±o§ï¦^¨Ó!
-		 * 	¤ñ¹ï»P¹w´ÁªºGrade(¤âºâ)¬O§_¬Û¦P
+		 * 	æ”¹æ‰System.outå»æ”¶æœ¬ä¾†é¡¯ç¤ºåœ¨consoleçš„å­—, è¨˜å¾—æ”¹å›ä¾†!
+		 * 	æ¯”å°èˆ‡é æœŸçš„Grade(æ‰‹ç®—)æ˜¯å¦ç›¸åŒ
 		 * End testShowGrade()
 		 */
 		grades1.calculateTotalGrade(oldWeights);
-		//ª`·N System.out.println() ¬O¦R¥X "\r\n" ¦Ó«D "\n"
-		String expected = grades1.getName() + "¦¨ÁZ¡G" + grades1.printGrades() + "\r\n";
+		//æ³¨æ„ System.out.println() æ˜¯åå‡º "\r\n" è€Œé "\n"
+		String expected = grades1.getName() + "æˆç¸¾ï¼š" + grades1.printGrades() + "\r\n";
 
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
@@ -115,7 +115,7 @@ public class GradeSystemsTest {
 		//Do something you need here
 		aGradeSystems.showGrade("962001044");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 		
 		assertEquals(expected, actual);
@@ -125,42 +125,42 @@ public class GradeSystemsTest {
 	public void testShowRank() {
 		/*
 		 * Public testShowRank()
-		 * 	§ï±¼System.out¥h¦¬¥»¨ÓÅã¥Ü¦bconsoleªº¦r, °O±o§ï¦^¨Ó!
-		 * 	¤ñ¹ï»P¹w´ÁªºRank¬O§_¬Û¦P
+		 * 	æ”¹æ‰System.outå»æ”¶æœ¬ä¾†é¡¯ç¤ºåœ¨consoleçš„å­—, è¨˜å¾—æ”¹å›ä¾†!
+		 * 	æ¯”å°èˆ‡é æœŸçš„Rankæ˜¯å¦ç›¸åŒ
 		 * End testShowRank()
 		 */
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
 		System.setOut(myOut);
 		aGradeSystems.showRank("962001044");
 		String actual = opS.toString();
-		//°O±o­n§â  System ªº output §ï¦^ System.out ¤~¯à¬İ¨ì¦r¦êÅã¥Ü¦b console ¤¤
+		//è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out æ‰èƒ½çœ‹åˆ°å­—ä¸²é¡¯ç¤ºåœ¨ console ä¸­
 		System.setOut(sysOut);
 		
-		String expected = "­â©v§Ê±Æ¦W²Ä2\r\n";
+		String expected = "å‡Œå®—å»·æ’åç¬¬2\r\n";
 		assertEquals(expected, actual);
 		
 	}
 	
-	//½ÕÅv­«¬° newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
+	//èª¿æ¬Šé‡ç‚º newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
 	@Test
 	public void testShowRank2() {
 		/*
 		 * Public testShowRank2()
-		 * 	±NÅv­«§ï¦¨ {0.2, 0.2, 0.2, 0.2, 0.2}
-		 * 	¤ñ¹ï»P¹w´ÁªºRank¬O§_¬Û¦P
+		 * 	å°‡æ¬Šé‡æ”¹æˆ {0.2, 0.2, 0.2, 0.2, 0.2}
+		 * 	æ¯”å°èˆ‡é æœŸçš„Rankæ˜¯å¦ç›¸åŒ
 		 * End testShowRank2()
 		 */
-		//§Q¥Î ByteArrayInputStream ¼ÒÀÀ System.in (Áä½Lªº¿é¤J°Ê§@)
+		//åˆ©ç”¨ ByteArrayInputStream æ¨¡æ“¬ System.in (éµç›¤çš„è¼¸å…¥å‹•ä½œ)
 		ByteArrayInputStream in = new ByteArrayInputStream("20\n20\n20\n20\n20\nY\n".getBytes());
 		System.setIn(in);
 		aGradeSystems.updateWeights();
-		//³Ì«á°O±o§â System ªº input §ï¦^ System.in
+		//æœ€å¾Œè¨˜å¾—æŠŠ System çš„ input æ”¹å› System.in
 		System.setIn(System.in);
 		
-		//¨Ï¥Î ByteArrayOutputStream Àò±o ¥»¨Ó¸ÓÅã¥Ü¦bConsoleªº¦r¦ê (§âSystem.out´«±¼)
+		//ä½¿ç”¨ ByteArrayOutputStream ç²å¾— æœ¬ä¾†è©²é¡¯ç¤ºåœ¨Consoleçš„å­—ä¸² (æŠŠSystem.outæ›æ‰)
 		ByteArrayOutputStream opS = new ByteArrayOutputStream();
 		PrintStream myOut = new PrintStream(opS);
 		PrintStream sysOut = System.out;
@@ -168,10 +168,10 @@ public class GradeSystemsTest {
 		//Do something you need here
 		aGradeSystems.showRank("962001044");
 		String actual = opS.toString();
-		//¤@¼Ë°O±o­n§â  System ªº output §ï¦^ System.out
+		//ä¸€æ¨£è¨˜å¾—è¦æŠŠ  System çš„ output æ”¹å› System.out
 		System.setOut(sysOut);
 		
-		String expected = "­â©v§Ê±Æ¦W²Ä1\r\n";
+		String expected = "å‡Œå®—å»·æ’åç¬¬1\r\n";
 		assertEquals(expected, actual);
 	}
 
@@ -179,19 +179,19 @@ public class GradeSystemsTest {
 	public void testUpdateWeights() {
 		/*
 		 * Public testUpdateWeights()
-		 * 	±NÅv­«§ï¦¨ {0.2, 0.2, 0.2, 0.2, 0.2}
-		 * 	¦A¥h¬İ¦³¨S¦³§ï¦¨¥\ (­×§ïSystem.in & System.out)
+		 * 	å°‡æ¬Šé‡æ”¹æˆ {0.2, 0.2, 0.2, 0.2, 0.2}
+		 * 	å†å»çœ‹æœ‰æ²’æœ‰æ”¹æˆåŠŸ (ä¿®æ”¹System.in & System.out)
 		 * End testUpdateWeights()
 		 */
 		
-		//§Q¥Î ByteArrayInputStream ¼ÒÀÀ System.in (Áä½Lªº¿é¤J°Ê§@)
+		//åˆ©ç”¨ ByteArrayInputStream æ¨¡æ“¬ System.in (éµç›¤çš„è¼¸å…¥å‹•ä½œ)
 		ByteArrayInputStream in = new ByteArrayInputStream("20\n20\n20\n20\n20\nY\n".getBytes());
 		System.setIn(in);
 
 		//Do something you need here
 		aGradeSystems.updateWeights();
 
-		//³Ì«á°O±o§â System ªº input §ï¦^ System.in
+		//æœ€å¾Œè¨˜å¾—æŠŠ System çš„ input æ”¹å› System.in
 		System.setIn(System.in);
 		
 		Double[] actual = aGradeSystems.getWeights();
