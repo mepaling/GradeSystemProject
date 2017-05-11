@@ -170,7 +170,7 @@ public class GradeSystems {
 			
 			String comString = sc.nextLine();
 			//System.out.println("IN GradeSystems:" + comString + "ob'_'ov");
-			sc.close();
+			//sc.close();
 			if (comString.equals("Y")) {
 				this.setWeights(newWeight);
 			}
@@ -277,11 +277,11 @@ public class GradeSystems {
 			if (all == 100) {
 				for (int i=0; i<5; i++) {
 					this.weights[i] = newWeights[i] / 100.0;
-					System.out.println(this.weights[i]);
+					//System.out.println(this.weights[i]);
 				}
 			}
 			else {
-				System.out.println("沒有100%");
+				System.out.println("配分比例合計需要100%, 請檢查");
 			}
 	}
 	

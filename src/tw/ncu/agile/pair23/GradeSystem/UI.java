@@ -54,7 +54,6 @@ public class UI {
 			scanner = new Scanner(System.in);
 			while (true) {
 				promptID();
-				System.out.println(id);
 				if (id.equals("Q"))
 					break;
 				checkID(id);
