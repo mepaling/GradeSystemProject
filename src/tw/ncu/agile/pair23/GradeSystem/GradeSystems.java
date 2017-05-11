@@ -198,10 +198,11 @@ public class GradeSystems {
 		*/
 			try {
 				File file = new File(fileName);
-				Scanner input = new Scanner(file);
+				Scanner input = new Scanner(file, "utf-8");
 				this.gradesList = new LinkedList<>();
 				while(input.hasNextLine()) {
-					String[] ele = input.nextLine().split(" ");
+					String line = input.nextLine();
+					String[] ele = line.split(" ");
 					Grades eleGrades = new Grades(ele[0], ele[1], Integer.parseInt(ele[2]),
 							Integer.parseInt(ele[3]), Integer.parseInt(ele[4]),
 							Integer.parseInt(ele[5]), Integer.parseInt(ele[6]));
