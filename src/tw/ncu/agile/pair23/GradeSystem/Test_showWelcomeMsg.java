@@ -67,7 +67,7 @@ End class Test_showWelcomeMsg
 		aUI.showWelcomeMsg();
 		System.out.flush();
 		System.setOut(old);
-		String expected = "Welcome 凌宗廷\r\n";
+		String expected = "Welcome 李威廷\r\n";
 		String actual = baos.toString();
 		assertEquals(expected, actual);
 	}
@@ -87,7 +87,7 @@ End class Test_showWelcomeMsg
 		aUI.showWelcomeMsg();
 		System.out.flush();
 		System.setOut(old);
-		String expected = "Welcome 李威廷\r\n";
+		String expected = "Welcome 凌宗廷\r\n";
 		String actual = baos.toString();
 		assertEquals(expected, actual);
 	}
