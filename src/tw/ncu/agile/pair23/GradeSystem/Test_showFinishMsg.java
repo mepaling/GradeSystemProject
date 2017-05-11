@@ -28,7 +28,7 @@ End class Test_showFinishMsg
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {/*
 	public static setUpBeforeClass()
-		¦b«ØºcaUI«e¥ı¼ÒÀÀ¿é¤JQ(quit)¡A¨Ï¥L¸õ¥Xloop¥H«K´ú¸Õ
+		åœ¨å»ºæ§‹aUIå‰å…ˆæ¨¡æ“¬è¼¸å…¥Q(quit)ï¼Œä½¿ä»–è·³å‡ºloopä»¥ä¾¿æ¸¬è©¦
 	End setUpBeforeClass
 	*/
 	
@@ -40,7 +40,7 @@ End class Test_showFinishMsg
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {/*
 	public static tearDownAfterClass()
-		±NaUI³]¬°null
+		å°‡aUIè¨­ç‚ºnull
 	End tearDownAfterClass
 	*/
 		
@@ -50,7 +50,7 @@ End class Test_showFinishMsg
 	@Test
 	public void testShowFinishMsg() {/*
 	public testShowFinishMsg
-		¹w´Áªº¿é¥XÀ³¸Ó"End"
+		é æœŸçš„è¼¸å‡ºæ‡‰è©²"End"
 	End testShowFinishMsg
 	*/
 		
@@ -61,7 +61,7 @@ End class Test_showFinishMsg
 		aUI.showFinishMsg();
 		System.out.flush();
 		System.setOut(old);
-		String expected = "End\r\n";
+		String expected = "çµæŸäº†\r\n";
 		String actual = baos.toString();
 		assertEquals(expected, actual);
 	}

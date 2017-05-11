@@ -9,8 +9,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /** ----------------------------------------------------------------------------------------------------------------------
-ID: 962001044 name: ­â©v§Ê
-ID: 962001051 name: §õ«Â§Ê
+ID: 962001044 name: å‡Œå®—å»·
+ID: 962001051 name: æå¨å»·
 ------------------------------------------------------------------------------------------------------------------------- */
 
 public class Test_checkID {/*
@@ -34,7 +34,7 @@ End class Test_checkID
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {/*
 	public static setUpBeforeClass()
-		¦b«ØºcaUI«e¥ı¼ÒÀÀ¿é¤JQ(quit)¡A¨Ï¥L¸õ¥Xloop¥H«K´ú¸Õ
+		åœ¨å»ºæ§‹aUIå‰å…ˆæ¨¡æ“¬è¼¸å…¥Q(quit)ï¼Œä½¿ä»–è·³å‡ºloopä»¥ä¾¿æ¸¬è©¦
 	End setUpBeforeClass
 	*/
 	
@@ -46,7 +46,7 @@ End class Test_checkID
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {/*
 	public static tearDownAfterClass()
-		±NaUI³]¬°null
+		å°‡aUIè¨­ç‚ºnull
 	End tearDownAfterClass
 	*/
 		
@@ -54,35 +54,35 @@ End class Test_checkID
 	}
 
 	@Test
-	public void testCheckID1() {/*
+	public void testCheckID1() throws NoSuchIDExceptions {/*
 	public testCheckID1
-		aUI.checkIDªºµ²ªGÀ³¸Ó­n¸òaUI.aGradeSystem.containsID¬Û¦P(¬Ò¬°true)
-		¨Ã¥B¤ñ¹ïaUI¤º¡A±ı¬d¸ßID»P¾Ç¥Í©m¦W¬O§_¬Û²Å
+		aUI.checkIDçš„çµæœæ‡‰è©²è¦è·ŸaUI.aGradeSystem.containsIDç›¸åŒ(çš†ç‚ºtrue)
+		ä¸¦ä¸”æ¯”å°aUIå…§ï¼Œæ¬²æŸ¥è©¢IDèˆ‡å­¸ç”Ÿå§“åæ˜¯å¦ç›¸ç¬¦
 	End testCheckID1
 	*/
 		
 		id = "962001044";
 		assertEquals(aUI.aGradeSystem.containsID(id), aUI.checkID(id));
-		assertEquals("­â©v§Ê",aUI.StdName);
+		assertEquals("å‡Œå®—å»·",aUI.name);
 	}
 	
 	@Test
-	public void testCheckID2() {/*
+	public void testCheckID2() throws NoSuchIDExceptions {/*
 	public testCheckID2
-		aUI.checkIDªºµ²ªGÀ³¸Ó­n¸òaUI.aGradeSystem.containsID¬Û¦P(¬Ò¬°true)
-		¨Ã¥B¤ñ¹ïaUI¤º¡A±ı¬d¸ßID»P¾Ç¥Í©m¦W¬O§_¬Û²Å
+		aUI.checkIDçš„çµæœæ‡‰è©²è¦è·ŸaUI.aGradeSystem.containsIDç›¸åŒ(çš†ç‚ºtrue)
+		ä¸¦ä¸”æ¯”å°aUIå…§ï¼Œæ¬²æŸ¥è©¢IDèˆ‡å­¸ç”Ÿå§“åæ˜¯å¦ç›¸ç¬¦
 	End testCheckID2
 	*/
 		
 		id = "962001051";
 		assertEquals(aUI.aGradeSystem.containsID(id), aUI.checkID(id));
-		assertEquals("§õ«Â§Ê",aUI.StdName);
+		assertEquals("æå¨å»·",aUI.name);
 	}
 	
 	@Test
-	public void testCheckID3() {/*
+	public void testCheckID3() throws NoSuchIDExceptions {/*
 	public testCheckID3
-		aUI.checkIDªºµ²ªGÀ³¸Ó­n¸òaUI.aGradeSystem.containsID¬Û¦P(¬Ò¬°false)
+		aUI.checkIDçš„çµæœæ‡‰è©²è¦è·ŸaUI.aGradeSystem.containsIDç›¸åŒ(çš†ç‚ºfalse)
 	End testCheckID3
 	*/
 		

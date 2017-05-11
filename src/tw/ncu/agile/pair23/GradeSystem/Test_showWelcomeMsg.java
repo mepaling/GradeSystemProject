@@ -11,8 +11,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /** ----------------------------------------------------------------------------------------------------------------------
-ID: 962001044 name: ­â©v§Ê
-ID: 962001051 name: §õ«Â§Ê
+ID: 962001044 name: å‡Œå®—å»·
+ID: 962001051 name: æå¨å»·
 ------------------------------------------------------------------------------------------------------------------------- */
 
 public class Test_showWelcomeMsg {/*
@@ -33,7 +33,7 @@ End class Test_showWelcomeMsg
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {/*
 	public static setUpBeforeClass()
-		¦b«ØºcaUI«e¥ı¼ÒÀÀ¿é¤JQ(quit)¡A¨Ï¥L¸õ¥Xloop¥H«K´ú¸Õ
+		åœ¨å»ºæ§‹aUIå‰å…ˆæ¨¡æ“¬è¼¸å…¥Q(quit)ï¼Œä½¿ä»–è·³å‡ºloopä»¥ä¾¿æ¸¬è©¦
 	End setUpBeforeClass
 	*/
 	
@@ -45,7 +45,7 @@ End class Test_showWelcomeMsg
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {/*
 	public static tearDownAfterClass()
-		±NaUI³]¬°null
+		å°‡aUIè¨­ç‚ºnull
 	End tearDownAfterClass
 	*/
 		
@@ -53,9 +53,9 @@ End class Test_showWelcomeMsg
 	}
 
 	@Test
-	public void testShowWelcomeMsg1() {/*
+	public void testShowWelcomeMsg1() throws NoSuchIDExceptions {/*
 	public testShowWelcomeMsg1
-		¿é¥XÀ³¸Ó­n¸ò¹w´Á¬Û¦P
+		è¼¸å‡ºæ‡‰è©²è¦è·Ÿé æœŸç›¸åŒ
 	End testShowWelcomeMsg1
 	*/
 		
@@ -67,15 +67,15 @@ End class Test_showWelcomeMsg
 		aUI.showWelcomeMsg();
 		System.out.flush();
 		System.setOut(old);
-		String expected = "Welcome ­â©v§Ê\r\n";
+		String expected = "Welcome å‡Œå®—å»·\r\n";
 		String actual = baos.toString();
 		assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void testShowWelcomeMsg2() {/*
+	public void testShowWelcomeMsg2() throws NoSuchIDExceptions {/*
 	public testShowWelcomeMsg2
-		¿é¥XÀ³¸Ó­n¸ò¹w´Á¬Û¦P
+		è¼¸å‡ºæ‡‰è©²è¦è·Ÿé æœŸç›¸åŒ
 	End testShowWelcomeMsg2
 	*/
 		
@@ -87,7 +87,7 @@ End class Test_showWelcomeMsg
 		aUI.showWelcomeMsg();
 		System.out.flush();
 		System.setOut(old);
-		String expected = "Welcome §õ«Â§Ê\r\n";
+		String expected = "Welcome æå¨å»·\r\n";
 		String actual = baos.toString();
 		assertEquals(expected, actual);
 	}
