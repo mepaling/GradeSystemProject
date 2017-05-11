@@ -79,7 +79,7 @@ End class Test_checkID
 		assertEquals("李威廷",aUI.name);
 	}
 	
-	@Test
+	@Test(expected=NoSuchIDExceptions.class)
 	public void testCheckID3() throws NoSuchIDExceptions {/*
 	public testCheckID3
 		aUI.checkID的結果應該要跟aUI.aGradeSystem.containsID相同(皆為false)
@@ -87,7 +87,7 @@ End class Test_checkID
 	*/
 		
 		id = "000000000";
-		assertEquals(aUI.aGradeSystem.containsID(id), aUI.checkID(id));
+		aUI.checkID(id);
 	}
 
 }
