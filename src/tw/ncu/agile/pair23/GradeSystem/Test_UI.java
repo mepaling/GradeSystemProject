@@ -26,7 +26,7 @@ End class Test_UI
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {/*
 	public static setUpBeforeClass()
-		¦b«ØºcaUI«e¥ı¼ÒÀÀ¿é¤JQ(quit)¡A¨Ï¥L¸õ¥Xloop¥H«K´ú¸Õ
+		åœ¨å»ºæ§‹aUIå‰å…ˆæ¨¡æ“¬è¼¸å…¥Q(quit)ï¼Œä½¿ä»–è·³å‡ºloopä»¥ä¾¿æ¸¬è©¦
 	End setUpBeforeClass
 	*/
 	
@@ -38,7 +38,7 @@ End class Test_UI
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {/*
 	public static tearDownAfterClass()
-		±NaUI³]¬°null
+		å°‡aUIè¨­ç‚ºnull
 	End tearDownAfterClass
 	*/
 		
@@ -48,7 +48,7 @@ End class Test_UI
 	@Test
 	public void testUI() {/*
 	public testUI
-		UI()·|³Ğ«ØaGradeSystem¡A©Ò¥HaUI.aGradSystemÀ³¤£¬°null
+		UI()æœƒå‰µå»ºaGradeSystemï¼Œæ‰€ä»¥aUI.aGradSystemæ‡‰ä¸ç‚ºnull
 	End testUI
 	*/
 		assertNotNull(aUI.aGradeSystem);

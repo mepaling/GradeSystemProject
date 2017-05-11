@@ -10,15 +10,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case (gradeInput_less.txt):
- * ID			name	lab1	lab2	lab3	mid-term	final	total
- * 962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
- * 962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
- * 
- * oldWeights = {0.1, 0.1, 0.1, 0.3, 0.4}
- * newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
-   --- */
+/*******************************************************************************
+test case (gradeInput_less.txt):
+ID			name	lab1	lab2	lab3	mid-term	final	total
+962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
+962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
+
+oldWeights = {0.1, 0.1, 0.1, 0.3, 0.4}
+newWeights = {0.2, 0.2, 0.2, 0.2, 0.2}
+expectedOutput:
+true (i.e. aGradeSystems.getWeights == newWeights)
+*******************************************************************************/
 
 public class Test_updateWeights {
 	

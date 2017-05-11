@@ -28,8 +28,8 @@ End class Test_promptCommand
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {/*
 	public static setUpBeforeClass()
-		¦b«ØºcaUI«e¥ı¼ÒÀÀ¿é¤JQ(quit)¡A¨Ï¥L¸õ¥Xloop¥H«K´ú¸Õ
-		¨Ã¥B¹w¥ı¼ÒÀÀ¿é¤J¹w´Á¦r¦ê("G")
+		åœ¨å»ºæ§‹aUIå‰å…ˆæ¨¡æ“¬è¼¸å…¥Q(quit)ï¼Œä½¿ä»–è·³å‡ºloopä»¥ä¾¿æ¸¬è©¦
+		ä¸¦ä¸”é å…ˆæ¨¡æ“¬è¼¸å…¥é æœŸå­—ä¸²("G")
 	End setUpBeforeClass
 	*/
 	
@@ -41,7 +41,7 @@ End class Test_promptCommand
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {/*
 	public static tearDownAfterClass()
-		±NaUI³]¬°null
+		å°‡aUIè¨­ç‚ºnull
 	End tearDownAfterClass
 	*/
 		
@@ -51,7 +51,7 @@ End class Test_promptCommand
 	@Test
 	public void testPromptCommand() {/*
 	public testPromptCommand
-		aUI¦¬¨ìªºcommandÀ³¸Ó­n¸ò¹w´Á¦r¦ê¬Û¦P("G")
+		aUIæ”¶åˆ°çš„commandæ‡‰è©²è¦è·Ÿé æœŸå­—ä¸²ç›¸åŒ("G")
 	End testPromptCommand
 	*/
 		

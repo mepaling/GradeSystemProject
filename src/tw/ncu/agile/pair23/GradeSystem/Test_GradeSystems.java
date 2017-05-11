@@ -10,12 +10,16 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case (gradeInput_less.txt):
- * ID			name	lab1	lab2	lab3	mid-term	final	total
- * 962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
- * 962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
-   --- */
+/*******************************************************************************
+test case (gradeInput_less.txt):
+ID			name	lab1	lab2	lab3	mid-term	final	total
+962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
+962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
+weights = {0.1, 0.1, 0.1, 0.3, 0.4}
+
+expectedOutput:
+"0.1 0.1 0.1 0.3 0.4\n962001044 ­â©v§Ê 87 86 98 88 87 88\n962001051 §õ«Â§Ê 81 98 84 90 93 91\n"
+********************************************************************************/
 
 public class Test_GradeSystems {
 	
