@@ -11,12 +11,18 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case (gradeInput_less.txt):
- * ID			name	lab1	lab2	lab3	mid-term	final	total
- * 962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
- * 962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
-   --- */
+/*******************************************************************************
+test case:
+weights = {0.1, 0.1, 0.1, 0.3, 0.4}
+#		ID			name	lab1	lab2	lab3	mid-term	final	total
+case1	962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
+expectedOutput:
+"­â©v§Ê¦¨ÁZ¡Glab1:\t87\nlab2:\t86\nlab3:\t98\nmid-term:\t88\nfinal exam:\t87\ntotal grade:\t88\r\n"
+
+case2	962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
+expectedOutput:
+"§õ«Â§Ê¦¨ÁZ¡Glab1:\t81\nlab2:\t98\nlab3:\t84\nmid-term:\t90\nfinal exam:\t93\ntotal grade:\t91\r\n"
+*******************************************************************************/
 
 public class Test_showGrade {
 	

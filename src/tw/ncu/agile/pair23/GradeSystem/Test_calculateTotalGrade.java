@@ -10,12 +10,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case:
- * ID			name	lab1	lab2	lab3	mid-term	final	total
- * 105522000	C8763	94		87		94		66			98 		86.5 -> 87
- * weights = {0.1, 0.1, 0.1, 0.3, 0.4};
-   --- */
+/*******************************************************************************
+test case:
+ID			name	lab1	lab2	lab3	mid-term	final	total
+105522000	C8763	94		87		94		66			98 		86.5 -> 87
+weights = {0.1, 0.1, 0.1, 0.3, 0.4};
+
+expectedOutput:
+87
+*******************************************************************************/
 
 public class Test_calculateTotalGrade {
 	

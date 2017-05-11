@@ -11,12 +11,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case (gradeInput_less.txt):
- * ID			name	lab1	lab2	lab3	mid-term	final	total		rank
- * 962001044	凌宗廷	87		86		98		88			87		88(88.3)	2
- * 962001051	李威廷	81		98		84		90			93		91(90.5)	1
-   --- */
+/*******************************************************************************
+test case (gradeInput_less.txt):
+#		ID			name	lab1	lab2	lab3	mid-term	final	total		rank
+case1	962001044	凌宗廷	87		86		98		88			87		88(88.3)	2
+expectedOutput:
+"凌宗廷排名第2\r\n"
+
+case2	962001051	李威廷	81		98		84		90			93		91(90.5)	1
+expectedOutput:
+"李威廷排名第1\r\n"
+*******************************************************************************/
 
 public class Test_showRank {
 

@@ -8,12 +8,13 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/* ---
- * test case (gradeInput_less.txt):
- * ID			name	lab1	lab2	lab3	mid-term	final	total
- * 962001044	­â©v§Ê	87		86		98		88			87		88(88.3)
- * 962001051	§õ«Â§Ê	81		98		84		90			93		91(90.5)
-   --- */
+/*******************************************************************************
+test case (gradeInput_less.txt):
+#	ID			ExpectedOutput
+id1	962001044	true
+id2	962001051	true
+id3	105522000	false
+*******************************************************************************/
 
 public class Test_containsID {
 	
