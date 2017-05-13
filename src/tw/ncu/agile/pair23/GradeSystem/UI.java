@@ -38,10 +38,16 @@ public class UI {
 		
 		    2.loop1 until Q (Quit)
 		          1. promptID() to get user ID  輸入ID或 Q (結束使用)？
-		          2. checkID (ID) 看 ID 是否在 aGradeSystem內
-		          3. showWelcomeMsg (ID)      ex. Welcome李威廷
-		          4. loop2 until E (Exit)
-		                 promptCommand() to prompt for inputCommand
+		          2. if input is "Q" then break
+						else assign inputID to userID end if
+		          3. checkID (ID) 看 ID 是否在 aGradeSystem內
+		          4. showWelcomeMsg (ID)      ex. Welcome李威廷
+		          5. loop2 until E (Exit)
+						1. promptCommand() to prompt for inputCommand
+		                2. if inputCommand is not G (Grade),R (Rank), W (Weights), or E (Exit),
+		   					throws an object of NoSuchCommandException  end if
+						3. if inputCommand is E (Exit) then break
+		   					else: G aGradeSystem.showGrade(ID), R showRank(ID), W updateWeights() end if
 		             end loop2
 		      end loop1
 		
@@ -96,7 +102,8 @@ public class UI {
 		/*
 		1. 要aGradeSystem 做containsID(ID) 看 ID 是否含在 aGradeSystem內
 		2. if not, throw an object of NoSuchIDExceptions
-		3. 回傳 true
+		3. 將aGradeSystem找到的名字assign到此class的變數name
+		4. 回傳 true
 		*/
 		if (aGradeSystem.containsID(id) == false) {
 			throw new NoSuchIDExceptions();
@@ -110,24 +117,18 @@ public class UI {
 	---------------------------------------------------------------------------------------------------------- */
 	public void promptID() {
 		/*
-		1. prompt user for inputID
-		2. if input is "Q" then break
-		   else assign inputID to userID end if
+		prompt user for inputID
 		*/
 		System.out.println("輸入ID或 Q (結束使用)？");
 		id = scanner.nextLine();
 	}
 
 	/** -------------------------------------------------------------------------------------------------------------
-	promptCommand() throws NoSuchCommandExceptions
+	promptCommand()
 	----------------------------------------------------------------------------------------------------------- */
 	public void promptCommand() {
 		/*
-		1. prompt user for inputCommand
-		2. if inputCommand is not G (Grade),R (Rank), W (Weights), or E (Exit),
-		   throws an object of NoSuchCommandException  end if
-		3. if inputCommand is E (Exit) then break
-		   else: G aGradeSystem.showGrade(ID), R showRank(ID), W updateWeights() end if
+		prompt user for inputCommand
 		*/
 		System.out.println("輸入指令");
 		System.out.println("1) G 顯示成績 (Grade)");
