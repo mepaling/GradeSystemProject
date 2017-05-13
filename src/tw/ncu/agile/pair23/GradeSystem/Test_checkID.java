@@ -82,7 +82,7 @@ End class Test_checkID
 	@Test(expected=NoSuchIDExceptions.class)
 	public void testCheckID3() throws NoSuchIDExceptions {/*
 	public testCheckID3
-		aUI.checkID的結果應該要跟aUI.aGradeSystem.containsID相同(皆為false)
+		因為id不在清單中，所以要丟exception
 	End testCheckID3
 	*/
 		
