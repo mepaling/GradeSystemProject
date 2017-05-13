@@ -1,5 +1,7 @@
 package tw.ncu.agile.pair23.GradeSystem;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.io.File;
@@ -38,17 +40,20 @@ public class GradeSystems {
 	 * 呼叫 ConstructFromFile(gradeInput_less.txt)
 	 * 從 gradeInput_less.txt
 	 * 建構 GradeSystems 變數
+	 * Time Estimate: O(n), n=資料筆數
 	 -------------------------------------*/
 	public GradeSystems() {
-		/* Call ConstructFromFile(filename=gradeInput_less.txt) */
+		/* Call ConstructFromFile(filename=gradeInput_full.txt) */
 		
-			ConstructFromFile("gradeInput_less.txt");
+			//ConstructFromFile("gradeInput_less.txt"); //developing
+			ConstructFromFile("gradeInput_full.txt");   //production
 	}
 	
 	/*--------------------------------------
 	 * 呼叫 ConstructFromFile(fileName)
 	 * 從 fileName 這個檔案
 	 * 建構 GradeSystems 變數
+	 * Time Estimate: O(n), n=資料筆數
 	 -------------------------------------*/
 	public GradeSystems(String fileName) {
 		/* Call ConstructFromFile(filename) */
@@ -59,18 +64,21 @@ public class GradeSystems {
 	/*--------------------------------------
 	 * 這是 gradesList 的 getter
 	 * 回傳該 instance 的 gradesList LinkedList
+	 * Time Estimate: O(1)
 	 -------------------------------------*/
 	public LinkedList<Grades> getGradesList () {return this.gradesList;	}
 	
 	/*--------------------------------------
 	 * 這是 getWeights 的 getter
 	 * 回傳 該 instance 的 weights array
+	 * Time Estimate: O(1)
 	 -------------------------------------*/
 	public Double[] getWeights() { return this.weights; }
 	
 	/* 
 	 * 判斷該 GradeSystems 有沒有這個 givenID 存在,
 	 * 有的話 return true, 預設是 return false
+	 * Time Estimate: O(n), n=資料筆數
 	 */
 	public boolean containsID(String id) {
 		/*	for 元素 in GradesList:
@@ -91,6 +99,7 @@ public class GradeSystems {
 	
 	/*--------------------------------------
 	 * showGrade(ID) 用來顯示 givenID 的對應成績 
+	 * Time Estimate: O(n), n=資料筆數
 	 -------------------------------------*/
 	public void showGrade(String id) {
 		/*	for 元素 in GradesList:
@@ -114,6 +123,7 @@ public class GradeSystems {
 	
 	/*--------------------------------------
 	 * showRank(ID) 用來顯示 givenID 的對應排名
+	 * Time Estimate: O(n), n=資料筆數
 	 -------------------------------------*/
 	public void showRank(String id) {
 		/*	令 rank 為 1
@@ -145,6 +155,7 @@ public class GradeSystems {
 	
 	/*--------------------------------------
 	 * 更新權重以後記得更新各 ID 的 totalGrade
+	 * Time Estimate: O(n), n=資料筆數
 	 -------------------------------------*/
 	public void updateWeights() {
 		/*	呼叫 showOldWeights
@@ -202,12 +213,14 @@ public class GradeSystems {
 				this.gradesList = new LinkedList<>();
 				while(input.hasNextLine()) {
 					String line = input.nextLine();
-					String[] ele = line.split(" ");
-					Grades eleGrades = new Grades(ele[0], ele[1], Integer.parseInt(ele[2]),
-							Integer.parseInt(ele[3]), Integer.parseInt(ele[4]),
-							Integer.parseInt(ele[5]), Integer.parseInt(ele[6]));
-					eleGrades.calculateTotalGrade(this.weights);
-					this.gradesList.add(eleGrades);
+					String[] ele = checkInput(line.split(" "));
+					if (ele.length > 0) {
+						Grades eleGrades = new Grades(ele[0], ele[1], Integer.parseInt(ele[2]),
+								Integer.parseInt(ele[3]), Integer.parseInt(ele[4]),
+								Integer.parseInt(ele[5]), Integer.parseInt(ele[6]));
+						eleGrades.calculateTotalGrade(this.weights);
+						this.gradesList.add(eleGrades);
+					}
 				}
 				input.close();
 			}
@@ -283,6 +296,31 @@ public class GradeSystems {
 			else {
 				System.out.println("配分比例合計需要100%, 請檢查");
 			}
+	}
+	
+	/*-------------------------------------------
+	 * 檢查各行輸入是否有誤
+	 * 有些人名只有兩個字如果只靠line.split()會出問題
+	 -------------------------------------------*/
+	String[] checkInput(String lines[]) {
+		/* !!!lines 是由 String.split(" ")所回傳的陣列!!!
+		 * 先開一個動態 String type 的 ArrayList
+		 * for element in 輸入的 lines array:
+		 * 		if element.length > 0
+		 *     		加進 ArrayList
+		 * 		end if
+		 * end for
+		 * 利用 ArrayList 的 toArray 將 ArrayList 轉回 String Array
+		 * return
+		 */
+			int i;
+			List<String> trueEle = new ArrayList<>();
+			for (i=0; i<lines.length; i++) {
+				if (lines[i].length() > 0)
+					trueEle.add(lines[i]);
+			}
+			String[] ret = trueEle.toArray(new String[trueEle.size()]);
+			return ret;
 	}
 	
 }

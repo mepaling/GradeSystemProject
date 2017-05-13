@@ -29,8 +29,9 @@ public class Grades {
 	private int lab1, lab2, lab3, midTerm, finalExam, totalGrade;
 	
 	/*--------------------------------------
-	 *建構空的成績 Grades instance
-	 *並做好空的初始化
+	 * 建構空的成績 Grades instance
+	 * 並做好空的初始化
+	 * Time Estimate: O(1)
 	 -------------------------------------*/
 	public Grades() {
 		/* 初始化 各 private 變數*/
@@ -45,8 +46,9 @@ public class Grades {
 	}
 	
 	/*-------------------------------------------
-	 *建構 Grades instance 後
-	 *呼叫 setGrades() 將對應的值初始化
+	 * 建構 Grades instance 後
+	 * 呼叫 setGrades() 將對應的值初始化
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public Grades(String ID, String name, int lab1, int lab2, int lab3, 
 			      int midTerm, int finalExam) {
@@ -56,6 +58,7 @@ public class Grades {
 	
 	/*-------------------------------------------
 	 * 實際對該 instance 指定 value 的 method
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public void setGrades(String ID, String name, int lab1, int lab2, int lab3, 
 							int midTerm, int finalExam) {
@@ -73,41 +76,49 @@ public class Grades {
 	
 	/*-------------------------------------------
 	 * ID 的 getter, 回傳該 instance 的 ID
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public String getID() {	return this.ID;	}
 	
 	/*-------------------------------------------
 	 * name 的 getter, 回傳該 instance 的 name
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public String getName() { return this.name;}
 	
 	/*-------------------------------------------
 	 * Lab1 的 getter, 回傳該 instance 的 Lab1 
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getLab1() { return this.lab1; }
 	
 	/*-------------------------------------------
 	 * Lab2 的 getter, 回傳該 instance 的 Lab2
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getLab2() { return this.lab2; }
 	
 	/*-------------------------------------------
 	 * Lab3 的 getter, 回傳該 instance 的 Lab3
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getLab3() { return this.lab3; }
 	
 	/*-------------------------------------------
 	 * midTerm 的 getter, 回傳該 instance 的 midTerm
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getMidterm() { return this.midTerm; }
 	
 	/*-------------------------------------------
 	 * finalExam 的 getter, 回傳該 instance 的 finalExam 
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getfinalExam() { return this.finalExam; }
 	
 	/*-------------------------------------------
 	 * totalGrade 的 getter, 回傳該 instance 的 totalGrade
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public int getTotalGrade() { return this.totalGrade; }
 	
@@ -116,6 +127,7 @@ public class Grades {
 	 * 計算對應的 totalGrades
 	 * 並使用 DoubleRoundToInteger() 轉成整數
 	 * 最後將 totalGrades 填入該 instance 的 totalGrade欄位
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public void calculateTotalGrade(Double[] weights) {
 		/* 根據輸入的 weights 計算對應的 totalGrades */
@@ -127,6 +139,7 @@ public class Grades {
 	
 	/*-------------------------------------------
 	 * 回傳 指定格式的 Grades 的字串 
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public String printGrades() {
 		return "lab1:\t" + this.lab1 + "\nlab2:\t" + this.lab2 + "\nlab3:\t" + this.lab3 + 
@@ -136,6 +149,7 @@ public class Grades {
 	
 	/*-------------------------------------------
 	 * 回傳這個 instance 現在所有的 private variable
+	 * Time Estimate: O(1)
 	 -------------------------------------------*/
 	public String toString(){
 		return this.ID + " " + this.name + " " + this.lab1 + " " + this.lab2 + " " + this.lab3 + 
