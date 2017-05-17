@@ -46,7 +46,7 @@ public class Test_showRank {
 
 	@Before
 	public void setUp() throws Exception {
-		aGradeSystems = new GradeSystems();
+		aGradeSystems = new GradeSystems("gradeInput_less.txt");
 	}
 
 	@After

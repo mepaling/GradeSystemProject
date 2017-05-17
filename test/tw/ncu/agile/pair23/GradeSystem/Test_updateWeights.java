@@ -48,7 +48,7 @@ public class Test_updateWeights {
 
 	@Before
 	public void setUp() throws Exception {
-		aGradeSystems = new GradeSystems();
+		aGradeSystems = new GradeSystems("gradeInput_less.txt");
 		case1 = new Grades("962001044", "凌宗廷", 87, 86, 98, 88, 87);
 		case2 = new Grades("962001051", "李威廷", 81, 98, 84, 90, 93);
 		oldWeights = new Double[]{0.1, 0.1, 0.1, 0.3, 0.4};

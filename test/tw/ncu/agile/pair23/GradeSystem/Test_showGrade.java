@@ -12,7 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /*******************************************************************************
-test case:
+test case (gradeInput_less.txt):
 weights = {0.1, 0.1, 0.1, 0.3, 0.4}
 #		ID			name	lab1	lab2	lab3	mid-term	final	total
 case1	962001044	凌宗廷	87		86		98		88			87		88(88.3)
@@ -51,7 +51,7 @@ public class Test_showGrade {
 
 	@Before
 	public void setUp() throws Exception {
-		aGradeSystems = new GradeSystems();
+		aGradeSystems = new GradeSystems("gradeInput_less.txt");
 		case1 = new Grades("962001044", "凌宗廷", 87, 86, 98, 88, 87);
 		case2 = new Grades("962001051", "李威廷", 81, 98, 84, 90, 93);
 		weights = new Double[]{0.1, 0.1, 0.1, 0.3, 0.4};

@@ -45,7 +45,7 @@ public class Test_containsID {
 
 	@Before
 	public void setUp() throws Exception {
-		aGradeSystems = new GradeSystems();
+		aGradeSystems = new GradeSystems("gradeInput_less.txt");
 	}
 
 	@After
